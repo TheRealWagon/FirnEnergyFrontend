@@ -1,0 +1,249 @@
+.LoginPage_Container {
+    width: 30vw;
+    height: 35vw;
+    background-color: red;
+}
+
+.LoginPage_Page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #7e6641c3;
+    font-family: "Sora";
+  }
+  
+  .image-org-container {
+    /* flex: 1; */
+    height: 80vh;
+    width: 50vw;
+    padding: 20px;
+    /* margin-right: 50px; */
+    background-color: #98784c;
+    border-radius: 25px 0px 0px 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .login-container {
+    width: 30vw;
+    height: 80vh;
+    padding: 20px;
+    margin-right: 50px;
+    background-color: #ffffff;
+    border-radius: 0px 25px 25px 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .Login-Header {
+    margin-bottom: 20px;
+    font-size: 4rem;
+    margin-top: -50px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-weight: 500;
+    /* width: 50%; */
+  }
+
+  .input-group-register {
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-weight: 500;
+    width: 50%;
+  }
+
+  .input-group-one {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.input-group-street {
+  width: 50%;
+}
+
+.input-group-housenumber {
+  width: 50%;
+}
+
+  .input-Label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-Field {
+    width: 90%;
+    padding-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+
+.GoBackButton-Container {
+  /* margin-bottom: auto; */
+  align-self: flex-start;
+}
+
+.GoBackButton {
+  height: 40px;
+  margin: auto;
+  display: block;
+  width: 100px ;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-family: Sora;
+  transition: background-color 0.3s;
+}
+
+  .Login-form-button {
+    height: 50px;
+    margin: auto;
+    display: block;
+    width: 60%;
+    padding: 0px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Sora;
+    transition: background-color 0.3s;
+  }
+
+  .login-switch-button {
+    border: none;
+    background: none;
+    font-family: Sora;
+    text-decoration: underline;
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0.7;
+    color: black;
+  }
+  
+  .login-switch-button:hover {
+    opacity: 0.9;
+    color: #007bff;
+    cursor: pointer;
+  }
+
+  .input-Checkbox-Label {
+    opacity: 0.8;
+  }
+
+  .Login-form-button:hover, .GoBackButton:hover {
+    background-color: #0056b3;
+  }
+
+  .LoginForm {
+    width: 30vw;
+  }
+
+  .LoginSuccesfull {
+    color: green;
+  }
+
+  .LoginFailed {
+    color: red;
+  }
+
+  .LoginImage {
+    /* Your other styles */
+  
+    /* Initial scale */
+    transform: scale(1);
+    
+    /* Apply a smooth transition effect */
+    transition: transform 1s ease;
+  }
+  
+  .LoginImage:hover {
+    /* Scale on hover */
+    /* transform: scale(1.1); */
+  }
+
+  .login-Details {
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 100%;
+
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .login-switch-button-container {
+    /* margin-left: auto; */
+  }
+
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  width: 90%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.front-image {
+  top: 20px;
+  left: 20px;
+  transform: translate(0, 0);
+}
+
+.back-image {
+  top: 40px;
+  left: 40px;
+  transform: translate(10px, 10px);
+}
+
+.image-container:hover .front-image {
+  transform: translate(10px, 10px);
+  z-index: 5;
+}
+
+.image-container:hover .back-image {
+  transform: translate(0, 0);
+}

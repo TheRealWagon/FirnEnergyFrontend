@@ -1,0 +1,409 @@
+.Navbar {
+    color: #231F20;
+    font-family: 'Poppins', sans-serif;
+    height: 75px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #231F20;
+}
+
+.NavbarLogo {
+    height: 75px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    background: #EEEEEE;
+/* background: linear-gradient(0deg, rgba(171,116,90,1) 25%, rgba(238,238,238,1) 53%); */
+}
+
+.user_icon_button {
+    border: none;
+    background: none;
+}
+
+
+.user_icon {
+    height: 50px;
+    cursor: pointer;
+}
+
+.info_icon {
+    height: 50px;
+}
+
+.Navbar_Items {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Navbar_Items > div {
+    margin: 0px 1vw 0px 1vw;
+}
+
+.Navbar_Items > div:nth-child(odd):hover, a:hover {
+    color: #AB745A;
+    cursor: pointer;
+}
+
+.Navbar_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    height: 75px;
+}
+
+.Navbar_info > div {
+    margin: 0px 1vw 0px 1vw;
+}
+
+.cover {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    color: white;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../Images/Runway 2023-07-11T13_43_48.777Z Expand Image.jpg');
+    background-color: #000000;
+    background-size: cover;
+    background-position: center center;
+}
+
+.cover::before {
+content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Change the color and opacity as needed */
+  opacity: 0.6;
+}
+
+.Cover_Title {
+    position: relative;
+    font-weight: 600;
+    z-index: 2;
+    font-size: 4rem;
+}
+
+.Cover_Line {
+    position: relative;
+    z-index: 2;
+
+    width: 35vw;
+    height: 2px;
+    background-color: white;
+}
+
+.Cover_description {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+
+}
+
+.BatteryDisplay {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.BatteryText {
+    width: 50vw;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.BatteryTitel {
+    color: #000000;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+.BatteryDesc {
+    padding-left: 30px;
+    color: #000000;
+    opacity: 70%;
+    font-size: 1.5rem;
+}
+
+.BatteryImage {
+    width: 25vw;
+}
+
+.Circle {
+    width: 45px;
+    height: 45px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PropBat {
+    width: 30px;
+}
+
+.PropTitle {
+    color: #231F20;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 3px;
+}
+
+.PropDesc {
+    color: #434343;
+    opacity: 0.65;
+    width: 25vw;
+}
+
+.flex-row {
+    width: 98vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.PropImage {
+    margin-bottom: 5px;
+}
+
+.flex-row2 {
+    display: flex;
+    justify-content: space-evenly;
+    flex: row nowrap;
+    margin-bottom: 100px;
+}
+
+.notVisible {
+    visibility: hidden;
+}
+
+.slider {
+    width: 35vw;
+    height: 2px;
+    background-color: #000000;
+}
+
+.ProfielHeader {
+    display: flex;
+    flex: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.ProfielTitel {
+    font-size: 3.2rem;
+    color: #231F20;
+    font-weight: 500;
+    text-shadow: 0px 4px 2px rgb(0, 0, 0, 0.25);
+}
+
+.profielBoxes {
+    display: flex;
+    flex: row nowrap;
+    justify-content: space-evenly;
+}
+
+.IndustrieelBox {
+    color: white;
+    width: 30vw;
+    height: 20vw;
+    background-image: url("../../Images/interior-large-logistics-warehouse-ai-generative.jpg");
+    background-color: #000000;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.ResidentieelBox {
+    width: 30vw;
+    height: 20vw;
+    background-image: url("../../Images/aerial-view-new-houses-bridgwater-somerset-uk.jpg");
+    background-color: #000000;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.ResidentieelBox::before {
+    content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 25px;
+      background-color: rgba(0, 0, 0, 0.6); /* Change the color and opacity as needed */
+      opacity: 0.6;
+}
+
+.BoxTitle {
+    font-size: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.BoxText {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.BoxSlider {
+    width: 60%;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.IndustrieelBox::before {
+    content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 25px;
+      background-color: rgba(0, 0, 0, 0.6); /* Change the color and opacity as needed */
+      opacity: 0.6;
+}
+
+.BoxDesc {
+    font-size: 1.4rem;
+    width: 70%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.BoxFollow {
+    position: relative;
+    z-index: 2;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    text-decoration: underline;
+}
+
+.BoxFollow:hover {
+    color: #AB745A;
+    cursor: pointer;
+}
+
+.profiel {
+    margin-bottom: 150px;
+}
+
+.AboutUsTitel {
+    font-weight: 600;
+    font-size: 3rem;
+    color: #231F20
+}
+
+.AboutUsDesc {
+    color: #3D3C3C;
+    opacity: 0.80;
+    font-size: 1.2rem;
+    width: 40vw;
+}
+
+.AboutUs {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.ContactDesc {
+    color: #231F20;
+    width: 50%;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.ContactInfo {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.PhoneButton {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 185px;
+    height: 40px;
+    background-color: #AB745A;
+    border-radius: 25px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+.EmailButton {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 260px;
+    height: 40px;
+    background-color: #AB745A;
+    border-radius: 25px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+.ContactButtons {
+    font-weight: 600;
+    margin-top: 50px;
+    width: 60vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.EmailButton:hover, .PhoneButton:hover {
+    cursor: pointer;
+    color: #bea195;
+}
+
+.ContactInfo {
+    margin-bottom: 100px;
+}
+
+.ContactImage {
+    width: 30px;
+}

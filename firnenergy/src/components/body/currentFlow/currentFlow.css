@@ -1,0 +1,166 @@
+.CurrentFlow-Container {
+    position: relative;
+    width: 450px;
+    min-width: 450px;
+    height: 500px;
+    /* background-color: #D9D9D9; */
+    /* border: #FF6B6B solid 2px; */
+    border-radius: 25px;
+}
+
+.CurrentFlow-Outer-Circle {
+    font-size: 1rem;
+    position: absolute;
+    width: 9vw;
+    height: 9vw;
+    max-width: 125px;
+    max-height: 125px;
+    min-width: 125px;
+    min-height: 125px;
+    border-radius: 100%;
+}
+
+.BATTERY-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.SOLAR-icon {
+    width: 40px;
+    height: 40px;
+    padding-bottom: 10px;
+}
+
+.GRID-Circle {
+    top: 50%;
+    right: 4.6%;
+    transform: translateY(-50%);
+    box-shadow: 0px 0px 10px rgba(248, 140, 140, 0.5);
+}
+
+.BATTERY-Circle {
+    top: 50%;
+    left: 4.3%;
+    transform: translateY(-50%);
+    box-shadow: 0px 0px 10px rgba(101, 216, 160, 0.5);
+}
+
+.HOME-Circle {
+    bottom: 4.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px rgba(206, 128, 234, 0.5);
+}
+
+.SOLAR-Circle {
+    top: 4.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px rgba(218, 187, 80, 0.5);
+}
+
+.SOLAR > div {
+    border: solid rgba(218, 187, 80, 0.5) 2px;
+}
+
+.SOLAR > div > div {
+    border: solid rgba(218, 187, 80, 0.8) 2px;
+}
+
+.GRID > div {
+    border: solid rgba(248, 140, 140, 0.50) 2px;
+}
+.GRID > div > div {
+    border: solid rgba(248, 140, 140, 0.80) 2px;
+}
+
+.BATTERY > div {
+    border: solid rgba(101, 216, 160, 0.50) 2px;
+}
+.BATTERY > div > div {
+    border: solid rgba(101, 216, 160, 0.8) 2px;
+}
+
+.HOME > div {
+    border: solid rgba(206, 128, 234, 0.5) 2px;
+}
+.HOME > div > div {
+    border: solid rgba(206, 128, 234, 0.8) 2px;
+}
+
+.CurrentFlow-Inner-Circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7.5vw;
+    height: 7.5vw;
+    max-width: 100px;
+    max-height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.CurrentFlow-BATTERY-Percentage {
+
+    position: relative;
+    display: inline-block;
+
+}
+
+.BATTERY-percentage {
+    position: absolute;
+    font-size: 0.8rem;
+  top: 47%; /* Adjust vertical position of text */
+  left: 50%; /* Adjust horizontal position of text */
+  transform: translate(-50%, -47%); /* Center text both horizontally and vertically */
+  text-align: center; /* Adjust text alignment if needed */
+  padding: 10px;
+}
+
+.BATTERY-HOME-Line {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -25%);
+}
+
+.HOME-GRID-Line {
+    position: absolute;
+    top: 50%;
+    right: 31.5%;
+    transform: translate(0%, -25%);
+}
+
+.SOLAR-BATTERY-Line {
+    position: absolute;
+    bottom: 40%;
+    left: 40%;
+    transform: translate(-50%, -12%);
+}
+
+.SOLAR-HOME-Line {
+    width: 3px;
+    height: 268px;
+    background: linear-gradient(270deg, #DABB50 0%, #D9B857 4.44%, #CE80EA 100%);
+}
+
+.SOLAR-GRID-Line {
+    position: absolute;
+    top: 35%;
+    right: 31.5%;
+    transform: translate(0%, -18%);
+}
+
+/* .BATTER-GRID-Line {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translate(0%, -18%);
+} */

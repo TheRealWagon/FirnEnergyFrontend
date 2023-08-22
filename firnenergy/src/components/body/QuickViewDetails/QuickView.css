@@ -1,0 +1,109 @@
+.QuickViewDetails {
+    width: 50vw;
+    /* background-color: #D9D9D9; */
+    height: 500px;
+    border-radius: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.QuickViewDetails-Left-Side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.QuickViewDetails-Item-Image {
+    width: 97%;
+    height: auto;
+}
+
+.QuickViewDetails-Item-Image-container {
+    width: 20%;
+    padding-left: 3%;
+}
+
+.QuickViewDetails-Item-Value {
+    width: 30%;
+    text-align: center;
+}
+
+.QuickViewDetails-Item-Title {
+    /* padding-right: 3%; */
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.QuickViewDetails-Item {
+    width: 80%;
+    height: 100px;
+    border-radius: 25px;
+    /* background-color: #FF6B6B; */
+    border: #FF6B6B solid 2px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 1.0vw;
+}
+
+.QuickViewDetails-Item:hover {
+    scale: 1.05;
+    cursor: pointer;
+    background-color: #FF6B6B;
+}
+
+.QuickViewDetails-Right-Side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Status_Online {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #8CC152;
+    margin: auto;
+}
+
+.Status_Offline {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #e13825;
+    margin: auto;
+}
+
+.Title_Online {
+    color: #8CC152;
+}
+
+.Title_Offline {
+    color: #e13825;
+}
+
+.QuickViewDetails-Item-Under-Titel {
+    font-size: 0.6vw;
+    opacity: 0.7;
+}
+
+.QuickViewDetails-Link {
+    height: 100px;
+    border-radius: 25px;
+    /* background-color: #FF6B6B; */
+    color: black;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 1.0vw;
+} 
