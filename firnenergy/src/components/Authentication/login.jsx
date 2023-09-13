@@ -25,9 +25,11 @@ const Login = () => {
             const checkIfAdmin = await userApi.GetUserData(token)
             console.log(checkIfAdmin.data.user.role)
             if (checkIfAdmin.data.user.role == "USER") {
-                navigate('/HomePage');
+                // navigate('/HomePage');
+                console.log("user")
             } else if (checkIfAdmin.data.user.role == "ADMIN") {
-                navigate('/AdminPage')
+                // navigate('/AdminPage');
+                console.log("admin")
             }
         }
     }
