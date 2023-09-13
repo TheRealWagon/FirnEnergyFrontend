@@ -22,6 +22,7 @@ const UsersList = () => {
             const token = localStorage.getItem('jwtToken');
             try {
                 const user = await userApi.GetUsername(token);
+                console.log(user)
 
                 if (user.data.user.role != 'ADMIN') {
                     throw Error;
