@@ -18,10 +18,17 @@ const Login = () => {
 
     const renderErrorMessage = (name) => name === errorMessages.name && (<div className='error'>{errorMessages.message}</div>);
 
-    const KeepLoggedIn = () => {
+    const KeepLoggedIn = async() => {
         const token = localStorage.getItem('jwtToken');
+
         if (token) {
-            navigate('/HomePage');
+            const checkIfAdmin = await userApi.GetUserData(token)
+            console.log(checkIfAdmin.data.user.role)
+            if (checkIfAdmin.data.user.role == "USER") {
+                navigate('/HomePage');
+            } else if (checkIfAdmin.data.user.role == "ADMIN") {
+                navigate('/AdminPage')
+            }
         }
     }
 
