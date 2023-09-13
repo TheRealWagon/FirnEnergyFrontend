@@ -128,7 +128,7 @@ const User = () => {
         let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: `https://firnenergybackend.onrender.com/api/users/info`,
+        url: `https://firnenergybackend.onrender.com/api/users/users`,
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`

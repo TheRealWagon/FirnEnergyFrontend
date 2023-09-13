@@ -22,11 +22,12 @@ const Login = () => {
         const token = localStorage.getItem('jwtToken');
 
         if (token) {
-            const checkIfAdmin = await userApi.GetUserData(token)
-            console.log(checkIfAdmin.data.user.role)
-            if (checkIfAdmin.data.user.role == "USER") {
+
+            const user = await userApi.GetUsername(token);
+
+            if (user.data.user.role == "USER") {
                 navigate('/HomePage');
-            } else if (checkIfAdmin.data.user.role == "ADMIN") {
+            } else if (user.data.user.role == "ADMIN") {
                 navigate('/AdminPage');
             }
         }
