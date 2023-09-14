@@ -52,7 +52,7 @@ const Measurement = () => {
         };
 
         try {
-            const response = await axios.post(corsProxy + config.url, data, config);
+            const response = await axios.post(config.url, data, config);
             return response.data; // Return the data after successful response
         } catch (error) {
             console.log(error);
@@ -124,7 +124,7 @@ const Measurement = () => {
         };
 
         try {
-            const response = await axios.post(corsProxy + config.url, data, config);
+            const response = await axios.post(config.url, data, config);
             return response.data; // Return the data after successful response
         } catch (error) {
             console.log(error);
@@ -195,7 +195,7 @@ const Measurement = () => {
         };
 
         try {
-            const response = await axios.post(corsProxy + config.url, data, config);
+            const response = await axios.post(config.url, data, config);
             const temp = response['data'][0]['series'][0]['values'];
             let ProductionArray = []
             let ConsumptionArray = []
@@ -282,7 +282,7 @@ const Measurement = () => {
         };
 
         try {
-            const response = await axios.post(corsProxy + config.url, data, config);
+            const response = await axios.post(config.url, data, config);
             //   console.log(response['data'][0]['series'][0]['values'])
             const result = Sum_Per_Hour(response['data'][0]['series'][0]['values']);
             const PriceData = await QuickViewDataPrice(accessToken, date);
@@ -359,7 +359,7 @@ const Measurement = () => {
         };
 
         try {
-            const response = await axios.post(corsProxy + config.url, data, config);
+            const response = await axios.post(config.url, data, config);
             //   const result = Sum_Per_Hour(response)
 
             return response['data'][0]['series'][0]['values'];
@@ -428,7 +428,7 @@ const Measurement = () => {
         };
 
         try {
-            const response = await axios.post(corsProxy + config.url, data, config);
+            const response = await axios.post(config.url, data, config);
             //   const result = Sum_Per_Hour(response)
             return response['data'][0]['series'][0]['values'];
             //   return response.data; // Return the data after successful response
@@ -498,7 +498,7 @@ const Measurement = () => {
 
         try {
             
-            const BuyPricePerHourContainer = await axios.post(corsProxy + config.url, data, config);
+            const BuyPricePerHourContainer = await axios.post(config.url, data, config);
             const BuyPricePerHour = BuyPricePerHourContainer['data'][0]['series'][0]['values'];
             const variablePricePerHour = 0.26
             const EarningsPerHour = await QuickViewDataRevenue(accessToken, date);
@@ -576,7 +576,7 @@ const Measurement = () => {
         };
 
         try {
-            const response = await axios.post(corsProxy + config.url, data, config);
+            const response = await axios.post(config.url, data, config);
             return response.data; // Return the data after successful response
         } catch (error) {
             console.log(error);
@@ -645,7 +645,7 @@ const Measurement = () => {
         };
 
         try {
-            const response = await axios.post(corsProxy + config.url, data, config);
+            const response = await axios.post(config.url, data, config);
             const result = response.data[0]['series'][0]['values']
             const endArray = []
             for (let index = 0; index < Object.keys(result).length; index++) {
@@ -768,7 +768,7 @@ const Measurement = () => {
         };
 
         try {
-            const response = await axios.post(corsProxy + config.url, data, config);
+            const response = await axios.post(config.url, data, config);
 
             return response; // Return the data after successful response
         } catch (error) {
