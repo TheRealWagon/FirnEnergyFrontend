@@ -18,7 +18,7 @@ const Body = ({darkMode}) => {
     const measurementApi = Measurement();
 
     //variable state's
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     //Data
     // const [currentFlowData, setCurrentFlowData] = useState([]);
@@ -39,86 +39,112 @@ const Body = ({darkMode}) => {
     const [RevenueToday, setRevenueToday] = useState('');
     const [foundFlowData, setfoundFlowData] = useState(false);
 
+    const [NodeIdList, setNodeIdList] = useState(null);
+
+    useEffect(() => {
+
+        //Initialize nodeId list
+
+        const getReturnList = async() => {
+            const accessToken = GetAccessToken();
+            const returnList = await measurementApi.initialize(accessToken);
+
+            setNodeIdList(returnList.data)
+        }
+        getReturnList();
+
+    }, [])
+
+
     // CurrentFlowData
     useEffect(() => {
-        const temp = () => {
-            const date = new Date();
 
-            console.log("CurrentFlowData")
+        if (NodeIdList != null) {
+            const temp = () => {
+                const date = new Date();
+    
+                console.log("CurrentFlowData")
+    
+                const GetCurrentFlowDataTemp = async() => {
+                    setLoading(true)
+    
+                    const AccessToken = GetAccessToken();
+                    await GetCurrentFlowData(AccessToken, date);
 
-            const GetCurrentFlowDataTemp = async() => {
-                setLoading(true)
-
-                const AccessToken = await GetAccessToken();
-                await GetCurrentFlowData(AccessToken, date);
-
-                setLoading(false)
+                    setLoading(false)
+                }
+                GetCurrentFlowDataTemp();
             }
-            GetCurrentFlowDataTemp();
-        }
-        temp();
+            temp();
+    
+            const intervalId = setInterval(temp, 60 * 1000);
+    
+            return () => clearInterval(intervalId);
+        } 
+    }, [NodeIdList])
 
-        const intervalId = setInterval(temp, 60 * 1000);
-
-        return () => clearInterval(intervalId);
-    }, [])
-
-    //QuickViewData
+    // QuickViewData
     useEffect(() => {
-        const temp = () => {
-            const date = new Date();
 
-            console.log("QuickViewData")
-
-            const GetQuickViewDataTemp = async() => {
-                setLoading(true)
-
-                const AccessToken = await GetAccessToken();
-                await GetQuickViewData(AccessToken, date);
-
-                setLoading(false)
+        if (NodeIdList != null) {
+        
+            const temp = () => {
+                const date = new Date();
+    
+                console.log("QuickViewData")
+    
+                const GetQuickViewDataTemp = async() => {
+                    setLoading(true)
+    
+                    const AccessToken = GetAccessToken();
+                    await GetQuickViewData(AccessToken, date);
+    
+                    setLoading(false)
+                }
+                GetQuickViewDataTemp();
             }
-            GetQuickViewDataTemp();
+            temp();
+        
+            const QuickintervalId = setInterval(temp, 15 * 60 * 1000);
+
+            return () => clearInterval(QuickintervalId);
         }
-        temp();
 
-        const QuickintervalId = setInterval(temp, 15 * 60 * 1000);
+    }, [NodeIdList])
 
-        return () => clearInterval(QuickintervalId);
-    }, [])
-
-    //BarChartData
+    // BarChartData
     useEffect(() => {
-        const temp = () => {
-            const date = new Date();
+        if (NodeIdList != null) {
 
-            console.log("BarChartData")
-
-            const GetBarChartDataTemp = async() => {
-                setLoading(true)
-
-                const AccessToken = await GetAccessToken();
-                await GetBarChartData(AccessToken, date);
-
-                setLoading(false)
+            const temp = () => {
+                const date = new Date();
+    
+                console.log("BarChartData")
+    
+                const GetBarChartDataTemp = async() => {
+                    setLoading(true)
+    
+                    const AccessToken = GetAccessToken();
+                    await GetBarChartData(AccessToken, date);
+    
+                    setLoading(false)
+                }
+                GetBarChartDataTemp();
             }
-            GetBarChartDataTemp();
+            temp();
+    
+            const BARintervalId = setInterval(temp, 15 * 60 * 1000);
+    
+            return () => clearInterval(BARintervalId);
         }
-        temp();
-
-        const BARintervalId = setInterval(temp, 15 * 60 * 1000);
-
-        return () => clearInterval(BARintervalId);
-    }, []);
+    }, [NodeIdList]);
 
     //Gets the access token from the back-end
-    const GetAccessToken = async () => {
+    const GetAccessToken = () => {
         const JwtToken = localStorage.getItem('jwtToken');
-        try {
-            const AccessToken = await userApi.GetAccessToken(JwtToken);
-            return AccessToken.data;
-        } catch (error) {
-            console.log(error)
+        if (JwtToken) {
+            return JwtToken;
+        } else {
             localStorage.removeItem('jwtToken');
             navigate('/');
         }
@@ -126,37 +152,60 @@ const Body = ({darkMode}) => {
 
     const GetCurrentFlowData = async (AccessToken, date) => {
 
-        const Data = await measurementApi.FlowData(AccessToken, date);
-        setGridW(Math.round(Data[0]['series'][0]['values'][0][1]));
-        setHomeW(Math.round(Data[0]['series'][0]['values'][0][2]));
-        setSolarW(Math.round(Data[0]['series'][0]['values'][0][3]));
-        setBatteryW(Math.round(Data[0]['series'][0]['values'][0][4]));
+        const data = await measurementApi.getCurrentFlowData(AccessToken, date, NodeIdList.currentFlowDataNodeId);
 
-        const dataBattery = await measurementApi.BatteryPercentage(AccessToken, date);
-        setBatteryP(dataBattery[0]['series'][0]['values'][0][1]);
+        const columns = data[0].columns
+        const indexes = {}
+
+        for (let index = 0; index < columns.length; index++) {
+            const element = columns[index];
+
+            if (element === "actualPowerTot_W") {
+                indexes["Grid"] = index;
+            } else if (element === "childrenConsumedPower_W") {
+                indexes["Consumption"] = index;
+            } else if (element === "childrenProducedPower_W") {
+                indexes["Production"] = index;
+            } else if (element === "childrenStoragePower_W") {
+                indexes["Battery"] = index;
+            }
+        }
+        const values = data[0].values[0]
+        setGridW(Math.round(values[indexes["Grid"]]));
+        setHomeW(Math.round(values[indexes["Consumption"]]));
+        setSolarW(Math.round(values[indexes["Production"]]));
+        setBatteryW(Math.round(values[indexes["Battery"]]));
+
+        const BatteryData = await measurementApi.getBatteryPercentage(AccessToken, date, NodeIdList.batteryPercentageDataNodeId);
+        const BattVal = BatteryData[0].values[0]
+
+        setBatteryP(BattVal[1])
     }
 
     const GetQuickViewData = async (AccessToken, date) => {
-        const FoundFlowData = false
+        // const FoundFlowData = false
 
-        const QuickViewEarnings = await measurementApi.BarChartRevenueData(AccessToken, date);
+        const result = await measurementApi.getBarChartRevenueData(AccessToken, date, NodeIdList.currentFlowDataNodeId);
         let total = 0
-        for (let index = 0; index < Object.keys(QuickViewEarnings).length; index++) {
-            const element = parseFloat(QuickViewEarnings[index]['Fed to grid']) + parseFloat(QuickViewEarnings[index]['FirnController Profit']);
+        for (let index = 0; index < Object.keys(result).length; index++) {
+            const element = parseFloat(result[index]['Fed to grid']) + parseFloat(result[index]['FirnController Profit']);
             total = total + parseFloat(element);
         }
         total = total.toFixed(2);
         setRevenueToday(total)
-        const QuickViewdata = await measurementApi.QuickViewData(AccessToken, date);
-        setYieldToday((QuickViewdata[0]['series'][0]['values'][0][1] / 1000).toFixed(2));
-        setConsumptionToday((QuickViewdata[0]['series'][0]['values'][0][2] / 1000).toFixed(2));
+
+        const QuickViewdata = await measurementApi.getQuickViewData(AccessToken, date, NodeIdList.quickViewDataNodeId);
+        const QuickViewDataValues = QuickViewdata[0].values[0]
+
+        setYieldToday((QuickViewDataValues[1] / 1000).toFixed(1));
+        setConsumptionToday((QuickViewDataValues[2] / 1000).toFixed(1));
 
         setfoundFlowData(true);
     }           
 
     const GetBarChartData = async (AccessToken, date) => {
 
-        const result = await measurementApi.BarChartData(AccessToken, date)
+        const result = await measurementApi.getBarChartData(AccessToken, date, NodeIdList.barChartDataNodeId);
         setBarChartData(result);
         
     }
@@ -166,7 +215,7 @@ const Body = ({darkMode}) => {
         const date = new Date();
 
         if (dataToRequest === "BarChartConsumptionData") {
-            const AccessToken = await GetAccessToken();
+            const AccessToken = GetAccessToken();
             // let result = 1;
             // switch (timePeriod) {
                 
@@ -194,15 +243,15 @@ const Body = ({darkMode}) => {
             // }
 
 
-            const result = await measurementApi.BarChartData(AccessToken, date);
+            const result = await measurementApi.getBarChartData(AccessToken, date, NodeIdList.barChartDataNodeId);
             setBarChartData(result);
         } else if (dataToRequest === "BarChartBatteryData") {
-            const AccessToken = await GetAccessToken();
-            const result = await measurementApi.BatteryPercentageRange(AccessToken, date);
+            const AccessToken = GetAccessToken();
+            const result = await measurementApi.getBatteryPercentageRange(AccessToken, date, NodeIdList.batteryPercentageDataNodeId);
             setBarChartData(result);
         } else if (dataToRequest === "BarChartRevenueData") {
-            const AccessToken = await GetAccessToken();
-            const result = await measurementApi.BarChartRevenueData(AccessToken, date);
+            const AccessToken = GetAccessToken();
+            const result = await measurementApi.getBarChartRevenueData(AccessToken, date, NodeIdList.currentFlowDataNodeId);
             setBarChartData(result);
         }
     }

@@ -164,3 +164,9 @@
     right: 0%;
     transform: translate(0%, -18%);
 } */
+
+.CurrentFlow-Inner-Circle > div {
+    font-size: 1rem;
+    font-family: Sora;
+    opacity: 0.85;
+}

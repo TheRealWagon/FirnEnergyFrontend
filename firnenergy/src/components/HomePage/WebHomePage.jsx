@@ -34,9 +34,9 @@ const WebHomePage = () => {
                 <div className="Navbar_Items">
                     <div style={{color: "#AB745A", textDecoration: "underline"}}>Home</div>
                     <div>|</div>
-                    <div><a href="#AboutUsLink">Over Ons</a></div>
+                    <div><a style={"NavbarLink"} href="#AboutUsLink">Over Ons</a></div>
                     <div>|</div>
-                    <div><a href="#ContactLink">Contact</a></div>
+                    <div><a style={"NavbarLink"} href="#ContactLink">Contact</a></div>
                     <div>|</div>
                     <div>Industrieel</div>
                     <div>|</div>

@@ -266,7 +266,7 @@ const Charts = ({Data, darkMode, requestBarChartData, ToggleLoading}) => {
 
 
     return (
-        <div>
+        <div className="Graphs">
             <div className="Graph-Headers">
                 <button className="Graph-Title" onClick={ConsumptionProductionClick}><div className={ConsumptionProductionHeaderStyle ? "activeCons" : "inactiveCons"}>Consumption & Production</div></button>
                 <button className="Graph-Title" onClick={BatteryClick}><div className={BatteryStyle ? "activeBattery" : "inactiveBattery"}>Battery</div></button>

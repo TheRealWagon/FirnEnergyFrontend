@@ -52,7 +52,7 @@ body {
     margin: 0px 1vw 0px 1vw;
 }
 
-.Navbar_Items > div:nth-child(odd):hover, a:hover {
+.Navbar_Items > div:nth-child(odd):hover, .NavbarLink:hover {
     color: #AB745A;
     cursor: pointer;
 }

@@ -1,8 +1,213 @@
 import axios from 'axios';
 
-const baseURL = "https://authentication.eniris.be/";
+// const baseURL = "https://firnenergybackend.onrender.com/api/users/login";
+const baseURL = "http://localhost:9000/api/measurements";
 
 const Measurement = () => {
+
+    
+    const initialize = async (token) => {
+
+        let config = {
+        method: 'get',
+        maxBodyLength: Infinity,
+        url: `/init`,
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        };
+
+        try {
+            const response = await axios.get(baseURL + config.url, config);
+            return response; // Return the data after successful response
+        } catch (error) {
+            console.log(error);
+            throw error; // Rethrow the error to handle it in HandleLoginEvent if needed
+        }
+
+    }
+
+
+    const getCurrentFlowData = async (accessToken, date, nodeId) => {
+        
+        let data = JSON.stringify(
+            {
+                "nodeId": `${nodeId}`,
+                "date": `${date}`,
+            }
+        );
+
+        let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: `/currentFlowData`,
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${accessToken}`
+        },
+        };
+
+        try {
+            const response = await axios.post(baseURL + config.url, data, config);
+            return response.data; // Return the data after successful response
+        } catch (error) {
+            console.log(error);
+            throw error; // Rethrow the error to handle it in HandleLoginEvent if needed
+        }
+    }
+
+
+    const getBatteryPercentage = async (accessToken, date, nodeId) => {
+        
+        let data = JSON.stringify(
+            {
+                "nodeId": `${nodeId}`,
+                "date": `${date}`,
+            }
+        );
+
+        let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: `/currentBatteryPercentage`,
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${accessToken}`
+        },
+        };
+
+        try {
+            const response = await axios.post(baseURL + config.url, data, config);
+            return response.data; // Return the data after successful response
+        } catch (error) {
+            console.log(error);
+            throw error; // Rethrow the error to handle it in HandleLoginEvent if needed
+        }
+    }
+
+    const getQuickViewData = async (accessToken, date, nodeId) => {
+        
+        let data = JSON.stringify(
+            {
+                "nodeId": `${nodeId}`,
+                "date": `${date}`,
+            }
+        );
+
+        let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: `/quickViewData`,
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${accessToken}`
+        },
+        };
+
+        try {
+            const response = await axios.post(baseURL + config.url, data, config);
+            return response.data; // Return the data after successful response
+        } catch (error) {
+            console.log(error);
+            throw error; // Rethrow the error to handle it in HandleLoginEvent if needed
+        }
+    }
+
+    const getBarChartData = async (accessToken, date, nodeId) => {
+        
+        let data = JSON.stringify(
+            {
+                "nodeId": `${nodeId}`,
+                "date": `${date}`,
+            }
+        );
+
+        let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: `/barChartData`,
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${accessToken}`
+        },
+        };
+
+        try {
+            const response = await axios.post(baseURL + config.url, data, config);
+            return response.data; // Return the data after successful response
+        } catch (error) {
+            console.log(error);
+            throw error; // Rethrow the error to handle it in HandleLoginEvent if needed
+        }
+    }
+
+    const getBatteryPercentageRange = async (accessToken, date, nodeId) => {
+        
+        let data = JSON.stringify(
+            {
+                "nodeId": `${nodeId}`,
+                "date": `${date}`,
+            }
+        );
+
+        let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: `/batteryPercentageRange`,
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${accessToken}`
+        },
+        };
+
+        try {
+            const response = await axios.post(baseURL + config.url, data, config);
+            return response.data; // Return the data after successful response
+        } catch (error) {
+            console.log(error);
+            throw error; // Rethrow the error to handle it in HandleLoginEvent if needed
+        }
+    }
+
+    const getBarChartRevenueData = async (accessToken, date, nodeId) => {
+        
+        let data = JSON.stringify(
+            {
+                "nodeId": `${nodeId}`,
+                "date": `${date}`,
+            }
+        );
+
+        let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: `/barChartRevenueData`,
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${accessToken}`
+        },
+        };
+
+        try {
+            const response = await axios.post(baseURL + config.url, data, config);
+            return response.data; // Return the data after successful response
+        } catch (error) {
+            console.log(error);
+            throw error; // Rethrow the error to handle it in HandleLoginEvent if needed
+        }
+    }
+
+
+    //////////////////////////////////////////////
+    //////////////////////////////////////////////
+    //////////////////////////////////////////////
+    //////////////////////////////////////////////
+    //////////////////////////////////////////////
+
+
+
+    
 
     //currentFlowData
     const FlowData = async (accessToken, date) => {
@@ -778,15 +983,13 @@ const Measurement = () => {
     }
 
     return {
-        FlowData,
-        BatteryPercentage,
-        QuickViewDataRevenue,
-        QuickViewData,
-        BarChartData,
-        BatteryPercentageRange,
-        getBuyPrice,
-        getImportAndConsumption,
-        BarChartRevenueData,
+        getCurrentFlowData,
+        initialize,
+        getBatteryPercentage,
+        getQuickViewData,
+        getBarChartData,
+        getBatteryPercentageRange,
+        getBarChartRevenueData,
     }
 
 
