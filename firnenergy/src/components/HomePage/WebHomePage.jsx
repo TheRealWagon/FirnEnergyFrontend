@@ -34,9 +34,9 @@ const WebHomePage = () => {
                 <div className="Navbar_Items">
                     <div style={{color: "#AB745A", textDecoration: "underline"}}>Home</div>
                     <div>|</div>
-                    <div><a style={"NavbarLink"} href="#AboutUsLink">Over Ons</a></div>
+                    <div><a className="NavbarLink" href="#AboutUsLink">Over Ons</a></div>
                     <div>|</div>
-                    <div><a style={"NavbarLink"} href="#ContactLink">Contact</a></div>
+                    <div><a className="NavbarLink" href="#ContactLink">Contact</a></div>
                     <div>|</div>
                     <div>Industrieel</div>
                     <div>|</div>
@@ -61,40 +61,42 @@ const WebHomePage = () => {
             </div>
             <div className="Properties">
                 <table>
-                    <tr className="flex-row">
-                        <td>
-                            <div className="PropImage"><div className="Circle"><img className="PropBat" src={batteryIcon} alt="" /></div></div>
-                            <div className="PropTitle">Duurzame batterijoplossingen</div>
-                            <div className="PropDesc">Dankzij de FIRN controller wordt uw batterij efficiënter gebruikt wat dan zorgt voor duurzame en betrouwbare batterij oplossingen.</div>
-                        </td>
-                        <td>
-                            <div className="PropImage"><div className="Circle"><img className="PropBat" src={flashIcon} alt="" /></div></div>
-                            <div className="PropTitle">Geavanceerd energiemanagement</div>
-                            <div className="PropDesc">Met behulp van real time data wordt uw systeem aangestuurd om op ieder moment de meest gepaste beslissing te nemen.</div>
-                        </td>
-                        <td>
-                            <div className="PropImage"><div className="Circle"><img className="PropBat" src={snowIcon} alt="" /></div></div>
-                            <div className="PropTitle">Geoptimaliseerde winter</div>
-                            <div className="PropDesc">Uw batterij wordt automatisch s ’nachts opgeladen om zo aan lage prijzen energie tijdens de dag te kunnen gebruiken.</div>
-                        </td>
-                    </tr>
-                    <tr className="flex-row2">
-                        <td>
-                            <div className="PropImage"><div className="Circle"><img className="PropBat" src={monitorIcon} alt="" /></div></div>
-                            <div className="PropTitle">Real time monitoring</div>
-                            <div className="PropDesc">Bekijk uw statistieken waar en wanneer u wilt. Ook kunt u geavanceerde grafieken bekijken om een zo gedetailleerd mogelijk beeld van de geleverde prestaties te krijgen.</div>
-                        </td>
-                        <td>
-                            <div className="PropImage"><div className="Circle"><img className="PropBat" src={walletIcon} alt="" /></div></div>
-                            <div className="PropTitle">Slimme teruglevering</div>
-                            <div className="PropDesc">Aan de hand van wisselende uurprijzen verkoopt de FIRN controller uw opgewekte energie aan de beste tarieven.</div>
-                        </td>
-                        <td className="notVisible">
-                            <div className="PropImage"><div className="Circle"><img className="PropBat" src="icons8-wallet-100.png" alt="" /></div></div>
-                            <div className="PropTitle"></div>
-                            <div className="PropDesc"></div>
-                        </td>
-                    </tr>
+                    <tbody>
+                        <tr className="flex-row">
+                            <td>
+                                <div className="PropImage"><div className="Circle"><img className="PropBat" src={batteryIcon} alt="" /></div></div>
+                                <div className="PropTitle">Duurzame batterijoplossingen</div>
+                                <div className="PropDesc">Dankzij de FIRN controller wordt uw batterij efficiënter gebruikt wat dan zorgt voor duurzame en betrouwbare batterij oplossingen.</div>
+                            </td>
+                            <td>
+                                <div className="PropImage"><div className="Circle"><img className="PropBat" src={flashIcon} alt="" /></div></div>
+                                <div className="PropTitle">Geavanceerd energiemanagement</div>
+                                <div className="PropDesc">Met behulp van real time data wordt uw systeem aangestuurd om op ieder moment de meest gepaste beslissing te nemen.</div>
+                            </td>
+                            <td>
+                                <div className="PropImage"><div className="Circle"><img className="PropBat" src={snowIcon} alt="" /></div></div>
+                                <div className="PropTitle">Geoptimaliseerde winter</div>
+                                <div className="PropDesc">Uw batterij wordt automatisch s ’nachts opgeladen om zo aan lage prijzen energie tijdens de dag te kunnen gebruiken.</div>
+                            </td>
+                        </tr>
+                        <tr className="flex-row2">
+                            <td>
+                                <div className="PropImage"><div className="Circle"><img className="PropBat" src={monitorIcon} alt="" /></div></div>
+                                <div className="PropTitle">Real time monitoring</div>
+                                <div className="PropDesc">Bekijk uw statistieken waar en wanneer u wilt. Ook kunt u geavanceerde grafieken bekijken om een zo gedetailleerd mogelijk beeld van de geleverde prestaties te krijgen.</div>
+                            </td>
+                            <td>
+                                <div className="PropImage"><div className="Circle"><img className="PropBat" src={walletIcon} alt="" /></div></div>
+                                <div className="PropTitle">Slimme teruglevering</div>
+                                <div className="PropDesc">Aan de hand van wisselende uurprijzen verkoopt de FIRN controller uw opgewekte energie aan de beste tarieven.</div>
+                            </td>
+                            <td className="notVisible">
+                                <div className="PropImage"><div className="Circle"><img className="PropBat" src="" alt="" /></div></div>
+                                <div className="PropTitle"></div>
+                                <div className="PropDesc"></div>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div className="profiel">
