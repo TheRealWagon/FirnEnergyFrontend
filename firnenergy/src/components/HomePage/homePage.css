@@ -1,409 +1,182 @@
-.Navbar {
-    color: #231F20;
-    font-family: 'Poppins', sans-serif;
-    height: 75px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-a {
-    text-decoration: none;
-    color: #231F20;
-}
-
-.NavbarLogo {
-    height: 75px;
-    border-radius: 0px 5px 5px 0px;
-}
-
-body {
-    margin: 0px;
-    font-family: 'Poppins', sans-serif;
-    background: #EEEEEE;
-/* background: linear-gradient(0deg, rgba(171,116,90,1) 25%, rgba(238,238,238,1) 53%); */
-}
-
-.user_icon_button {
-    border: none;
-    background: none;
-}
-
-
-.user_icon {
-    height: 50px;
-    cursor: pointer;
-}
-
-.info_icon {
-    height: 50px;
-}
-
-.Navbar_Items {
-    font-size: 1.5rem;
-    font-weight: 600;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.Navbar_Items > div {
-    margin: 0px 1vw 0px 1vw;
-}
-
-.Navbar_Items > div:nth-child(odd):hover, .NavbarLink:hover {
-    color: #AB745A;
-    cursor: pointer;
-}
-
-.Navbar_info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 700;
-    font-size: 1.3rem;
-    height: 75px;
-}
-
-.Navbar_info > div {
-    margin: 0px 1vw 0px 1vw;
-}
-
-.cover {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    display: flex;
-    color: white;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../../Images/Runway 2023-07-11T13_43_48.777Z Expand Image.jpg');
-    background-color: #000000;
-    background-size: cover;
-    background-position: center center;
-}
-
-.cover::before {
-content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Change the color and opacity as needed */
-  opacity: 0.6;
-}
-
-.Cover_Title {
-    position: relative;
-    font-weight: 600;
-    z-index: 2;
-    font-size: 4rem;
-}
-
-.Cover_Line {
-    position: relative;
-    z-index: 2;
-
-    width: 35vw;
-    height: 2px;
-    background-color: white;
-}
-
-.Cover_description {
-    position: relative;
-    z-index: 2;
-    font-size: 2rem;
-
-}
-
-.BatteryDisplay {
-    margin-top: 75px;
-    margin-bottom: 75px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.BatteryText {
-    width: 50vw;
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-.BatteryTitel {
-    color: #000000;
+.HomePage-Overlay {
+    font-family: Poppins;
     font-weight: bold;
-    font-size: 3.5rem;
+
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../Images/majestic-mountain-peak-back-lit-by-sunset-generated-by-ai 1.png');
+    background-color: #000000;
+    background-size: cover;
+    background-position: top center;
+
+    transition: opacity 6s ease;
 }
 
-.BatteryDesc {
-    padding-left: 30px;
-    color: #000000;
-    opacity: 70%;
-    font-size: 1.5rem;
+.HomePage-Navbar {
+
+    width: 100vw;
+    height: 75px;
+
+    color: white;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.BatteryImage {
-    width: 25vw;
+.HomePage-Navbar-Items {
+    width: 40vw;
+
+    font-size: 1.2rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
-.Circle {
-    width: 45px;
-    height: 45px;
-    background-color: #D9D9D9;
-    border-radius: 50%;
+.HomePage-Navbar-Logo {
+    width: 180px;
+    /* height: 90px; */
+}
+
+.HomePage-Navbar-Items-Dashboard-Button {
+    background-color: #AB745A;
+    height: 100%;
+    border-radius: 20px;
+
+    /* height: 30px; */
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* margin: 5px; */
 }
 
-.PropBat {
-    width: 30px;
+.HomePage-Navbar-Items-Dashboard {
+    width: 130px;
+    height: 30px;
+    align-self: flex-start;
 }
 
-.PropTitle {
-    color: #231F20;
-    font-weight: 600;
-    font-size: 1.3rem;
-    margin-bottom: 3px;
+.HomePage-Navbar-Items-Dashboard-Text {
+    /* padding: 5px; */
+    /* margin: 5px; */
 }
 
-.PropDesc {
-    color: #434343;
-    opacity: 0.65;
-    width: 25vw;
-}
+.HomePage-Overlay-Content {
+    width: 100vw;
+    height: 80vh;
 
-.flex-row {
-    width: 98vw;
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 50px;
-}
-
-.PropImage {
-    margin-bottom: 5px;
-}
-
-.flex-row2 {
-    display: flex;
-    justify-content: space-evenly;
-    flex: row nowrap;
-    margin-bottom: 100px;
-}
-
-.notVisible {
-    visibility: hidden;
-}
-
-.slider {
-    width: 35vw;
-    height: 2px;
-    background-color: #000000;
-}
-
-.ProfielHeader {
-    display: flex;
-    flex: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.ProfielTitel {
-    font-size: 3.2rem;
-    color: #231F20;
-    font-weight: 500;
-    text-shadow: 0px 4px 2px rgb(0, 0, 0, 0.25);
-}
-
-.profielBoxes {
-    display: flex;
-    flex: row nowrap;
-    justify-content: space-evenly;
-}
-
-.IndustrieelBox {
-    color: white;
-    width: 30vw;
-    height: 20vw;
-    background-image: url("../../Images/interior-large-logistics-warehouse-ai-generative.jpg");
-    background-color: #000000;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 25px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.ResidentieelBox {
-    width: 30vw;
-    height: 20vw;
-    background-image: url("../../Images/aerial-view-new-houses-bridgwater-somerset-uk.jpg");
-    background-color: #000000;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 25px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    color: white;
-}
-
-.ResidentieelBox::before {
-    content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 25px;
-      background-color: rgba(0, 0, 0, 0.6); /* Change the color and opacity as needed */
-      opacity: 0.6;
-}
-
-.BoxTitle {
-    font-size: 4rem;
-    position: relative;
-    z-index: 2;
-}
-
-.BoxText {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
-
-.BoxSlider {
-    width: 60%;
-    height: 2px;
-    background-color: white;
-    position: relative;
-    z-index: 2;
-}
-
-.IndustrieelBox::before {
-    content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 25px;
-      background-color: rgba(0, 0, 0, 0.6); /* Change the color and opacity as needed */
-      opacity: 0.6;
-}
-
-.BoxDesc {
-    font-size: 1.4rem;
-    width: 70%;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-.BoxFollow {
-    position: relative;
-    z-index: 2;
-    font-size: 1.4rem;
-    margin-bottom: 25px;
-    text-decoration: underline;
-}
-
-.BoxFollow:hover {
-    color: #AB745A;
-    cursor: pointer;
-}
-
-.profiel {
-    margin-bottom: 150px;
-}
-
-.AboutUsTitel {
-    font-weight: 600;
-    font-size: 3rem;
-    color: #231F20
-}
-
-.AboutUsDesc {
-    color: #3D3C3C;
-    opacity: 0.80;
-    font-size: 1.2rem;
-    width: 40vw;
-}
-
-.AboutUs {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 100px;
+
 }
 
-.ContactDesc {
-    color: #231F20;
+.HomePage-Overlay-Content-Element {
     width: 50%;
-    font-size: 1.3rem;
-    text-align: center;
+    height: 100%;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.ContactInfo {
+.HomePage-Overlay-Text {
+    /* background-color: black; */
+    margin-left: auto;
+    color: #FFFFFF;
+
+    height: 40vh;
+    width: 60%;
+
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: flex-start;
 }
 
-.PhoneButton {
+.HomePage-Overlay-Text-Title {
+    font-size: 5rem;
+}
+
+.HomePage-Overlay-Text-Title-Color {
+    color: #AB745A;
+}
+
+.HomePage-Overlay-Text-Button {
+    width: 25%;
+    height: 30px;
+    
+    margin-top: 20px;
+
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    width: 185px;
-    height: 40px;
+
     background-color: #AB745A;
-    border-radius: 25px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);
+
+    border-radius: 20px;
 }
 
-.EmailButton {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 260px;
+.HomePage-Overlay-Picture {
+    width: 80%;
+
+    margin-left: 5vw;
+}
+
+.scroll-indicator {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    opacity: 0.7;
+  }
+  
+  .arrow {
+    display: block;
+    width: 40px; /* Adjust the size of the arrow */
     height: 40px;
-    background-color: #AB745A;
-    border-radius: 25px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);
+    border: solid #fff; /* Arrow color */
+    border-width: 0px 4px 4px 0; 
+    transition: transform 0.3s ease;
+    animation: bounce 2s infinite;
+  }
+  
+  /* Define the bounce animation */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0) rotate(45deg);
+    }
+    40% {
+      transform: translateY(8px) rotate(45deg); /* Adjust the bounce height */
+    }
+    60% {
+      transform: translateY(3px) rotate(45deg); /* Adjust the bounce height */
+    }
+  }
+
+
+.HomePage-Plans {
+
+    /* width: 100vw; */
+    height: 93vh;
+
+    background-color: #683F29;
+
 }
 
-.ContactButtons {
-    font-weight: 600;
-    margin-top: 50px;
-    width: 60vw;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
+.HomePage-Contact {
+    background-color: #C9B79C;
 
-.EmailButton:hover, .PhoneButton:hover {
-    cursor: pointer;
-    color: #bea195;
-}
-
-.ContactInfo {
-    margin-bottom: 100px;
-}
-
-.ContactImage {
-    width: 30px;
+    height: 7vh;
 }
