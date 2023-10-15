@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const baseURL = "https://firnenergybackend.onrender.com/api/measurements";
-// const baseURL = "http://localhost:9000/api/measurements";
+// const baseURL = "https://firnenergybackend.onrender.com/api/measurements";
+const baseURL = "http://localhost:9000/api/measurements";
 
 const Measurement = () => {
 
@@ -197,7 +197,35 @@ const Measurement = () => {
             throw error; // Rethrow the error to handle it in HandleLoginEvent if needed
         }
     }
+    
 
+    const setSignal = async (accessToken, serialNr, nodeId, Signals) => {
+        
+        console.log(Signals)
+
+        let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: `/setSignal`,
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${accessToken}`
+        },
+        data: JSON.stringify({
+            serialNr: serialNr,
+            nodeId: nodeId,
+            signals: Signals, // Pass the Signals array directly
+        }),
+        };
+
+        try {
+            const response = await axios.post(baseURL + config.url, config.data, config);
+            return response.data; // Return the data after successful response
+        } catch (error) {
+            console.log(error);
+            throw error; // Rethrow the error to handle it in HandleLoginEvent if needed
+        }
+    }
 
     //////////////////////////////////////////////
     //////////////////////////////////////////////
@@ -990,6 +1018,7 @@ const Measurement = () => {
         getBarChartData,
         getBatteryPercentageRange,
         getBarChartRevenueData,
+        setSignal,
     }
 
 

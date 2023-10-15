@@ -3,7 +3,7 @@
 import Navbar from "../Navbar/navbar";
 import Body from '../body/bodyContainer';
 import Login from '../Authentication/login';
-import WebHomePage from '../HomePage/WebHomePage';
+import OldWebHomePage from '../HomePage/OldWebHomePage';
 import AdminPage from '../body/admin/adminPage';
 
 export const LoginPage = () => (
@@ -25,7 +25,7 @@ export const HomePage = () => (
 
 export const WebsiteHomePage = () => (
     <div>
-        <WebHomePage />
+        <OldWebHomePage />
     </div>
 )
 

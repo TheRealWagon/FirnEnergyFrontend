@@ -1,4 +1,4 @@
-import "./homePage.css"
+import "./OldhomePage.css"
 
 import userIcon from '../../Images/6522516.png'
 import WebLogo from '../../Images/firnenergyLogo.png'
