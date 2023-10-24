@@ -28,13 +28,13 @@ const OldWebHomePage = () => {
 
 
     return (
-        <div>
+        <div className="HomePageBody">
             <div className="Navbar">
                 <div><img className="NavbarLogo" src={WebLogo} alt="https://ibb.co/LdnxQng" /></div>
                 <div className="Navbar_Items">
                     <div>Home</div>
                     <div>|</div>
-                    <div><a className="NavbarLink" href="#AboutUsLink">Over Ons</a></div>
+                    <div><a className="NavbarLink" href="#AboutUsLink">Over ons</a></div>
                     <div>|</div>
                     <div><a className="NavbarLink" href="#ContactLink">Contact</a></div>
                     <div className="Phone-Remove">|</div>
@@ -63,29 +63,29 @@ const OldWebHomePage = () => {
                 <table>
                     <tbody>
                         <tr className="flex-row">
-                            <td>
+                            <td className="Property">
                                 <div className="PropImage"><div className="Circle"><img className="PropBat" src={batteryIcon} alt="" /></div></div>
                                 <div className="PropTitle">Duurzame batterijoplossingen</div>
                                 <div className="PropDesc">Dankzij de FIRN controller wordt uw batterij efficiënter gebruikt wat dan zorgt voor duurzame en betrouwbare batterij oplossingen.</div>
                             </td>
-                            <td>
+                            <td className="Property">
                                 <div className="PropImage"><div className="Circle"><img className="PropBat" src={flashIcon} alt="" /></div></div>
                                 <div className="PropTitle">Geavanceerd energiemanagement</div>
                                 <div className="PropDesc">Met behulp van real time data wordt uw systeem aangestuurd om op ieder moment de meest gepaste beslissing te nemen.</div>
                             </td>
-                            <td>
+                            <td className="Property">
                                 <div className="PropImage"><div className="Circle"><img className="PropBat" src={snowIcon} alt="" /></div></div>
                                 <div className="PropTitle">Geoptimaliseerde winter</div>
                                 <div className="PropDesc">Uw batterij wordt automatisch s ’nachts opgeladen om zo aan lage prijzen energie tijdens de dag te kunnen gebruiken.</div>
                             </td>
                         </tr>
                         <tr className="flex-row2">
-                            <td>
+                            <td className="Property">
                                 <div className="PropImage"><div className="Circle"><img className="PropBat" src={monitorIcon} alt="" /></div></div>
                                 <div className="PropTitle">Real time monitoring</div>
                                 <div className="PropDesc">Bekijk uw statistieken waar en wanneer u wilt. Ook kunt u geavanceerde grafieken bekijken om een zo gedetailleerd mogelijk beeld van de geleverde prestaties te krijgen.</div>
                             </td>
-                            <td>
+                            <td className="Property">
                                 <div className="PropImage"><div className="Circle"><img className="PropBat" src={walletIcon} alt="" /></div></div>
                                 <div className="PropTitle">Slimme teruglevering</div>
                                 <div className="PropDesc">Aan de hand van wisselende uurprijzen verkoopt de FIRN controller uw opgewekte energie aan de beste tarieven.</div>
@@ -125,7 +125,7 @@ const OldWebHomePage = () => {
                 </div>
             </div>
             <div className="AboutUs" id="AboutUsLink">
-                <div><img src={controllerImage} alt="" /></div>
+                <div><img className="ControllerImageResized" src={controllerImage} alt="" /></div>
                 <div className="AboutUsText">
                     <div className="AboutUsTitel">Laat ons jou helpen</div>
                     <div className="AboutUsDesc">FIRN Energy is een toonaangevend bedrijf dat zich richt op het ontwikkelen van geavanceerde batterijoplossingen en energiemanagementsystemen. Wij geloven in de kracht van energieopslag en de impact die het kan hebben op de manier waarop we energie consumeren en beheren. Onze missie is om duurzame en betrouwbare energieopslagoplossingen te bieden die de overgang naar een groenere toekomst ondersteunen.</div>

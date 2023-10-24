@@ -194,7 +194,7 @@ content: "";
 .flex-row2 {
     display: flex;
     justify-content: space-evenly;
-    flex: row nowrap;
+    /* flex: row nowrap; */
     margin-bottom: 100px;
 }
 
@@ -412,6 +412,10 @@ content: "";
 
 @media screen and (max-width: 600px) {
  
+    .HomePageBody {
+        overflow-x: hidden;
+    }
+
     .Navbar {
 
         color: #231F20;
@@ -432,8 +436,8 @@ content: "";
     }
 
     .Navbar_Items {
-        width: 90%;
-        font-size: 1.3rem;
+        width: 70%;
+        font-size: 1.2rem;
         font-weight: 6000;
         display: flex;
         flex-flow: row nowrap;
@@ -484,4 +488,231 @@ content: "";
         font-size: 1.3rem;
         text-align: center;
     }
+
+    .BatteryDisplay {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .BatteryText {
+        width: 90vw;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .BatteryTitel {
+        font-size: 2rem;
+    }
+
+    .BatteryDesc {
+        padding-left: 15px;
+        padding-right: 15px;
+        color: #000000;
+        opacity: 70%;
+        font-size: 0.9rem;
+        padding-bottom: 25px;
+        /* text-align: center; */
+    }
+
+    .BatteryImage {
+        width: 45vw;
+    }
+
+    .Properties {
+        margin-left: 30px;
+    }
+
+    .PropImage {
+        margin-right: 10px;
+    }
+
+    .flex-row {
+        width: 98vw;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        margin-bottom: 0px;
+    }
+
+    .flex-row2 {
+        display: flex;
+        flex-flow: column nowrap;
+        /* justify-content: space-evenly; */
+        /* flex: column; */
+        margin-bottom: 0px;
+    }
+
+    .Property {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+    }
+
+
+    .PropTitle {
+        width: 100%;
+        color: #231F20;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 3px;
+        text-align: center;
+    }
+
+    .PropDesc {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: #434343;
+        opacity: 0.65;
+        width: 100%;
+        text-align: center;
+        /* margin-left: 55px; */
+    }
+
+    .ProfielTitel {
+        font-size: 2rem;
+        color: #231F20;
+        font-weight: 500;
+        text-shadow: 0px 4px 2px rgb(0, 0, 0, 0.0);
+    }
+
+    .slider {
+        width: 20vw;
+        height: 2px;
+        background-color: #000000;
+    }
+
+    .profielBoxes {
+        display: flex;
+        flex-flow: column nowrap;
+        /* justify-content: space-evenly; */
+        align-items: center;
+    }
+
+    .IndustrieelBox {
+        color: white;
+        width: 80%;
+        height: 200px;
+        background-image: url("../../Images/interior-large-logistics-warehouse-ai-generative.jpg");
+        background-color: #000000;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 25px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .ResidentieelBox {
+        width: 80%;
+        height: 200px;
+        margin-top: 30px;
+        background-image: url("../../Images/aerial-view-new-houses-bridgwater-somerset-uk.jpg");
+        background-color: #000000;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 25px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        color: white;
+    }
+
+    .BoxTitle {
+        font-size: 2.5rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .BoxSlider {
+        width: 50%;
+        height: 2px;
+        background-color: white;
+        position: relative;
+        z-index: 2;
+    }
+
+    .BoxDesc {
+        margin-top: 10px;
+        font-size: 1.1rem;
+        width: 70%;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .ControllerImageResized {
+        width: 100%;
+    }
+
+    .AboutUs {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .profiel {
+        margin-bottom: 50px;
+    }
+
+    .AboutUsTitel {
+        font-weight: 600;
+        font-size: 2.3rem;
+        color: #231F20;
+        text-align: center;
+    }
+
+    .AboutUsDesc {
+        margin-left: 10%;
+        color: #3D3C3C;
+        opacity: 0.80;
+        font-size: 1rem;
+        width: 80%;
+        /* text-align: center; */
+    }
+
+    .ContactDesc {
+        color: #231F20;
+        width: 80%;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .PhoneButton {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 60%;
+        height: 40px;
+        background-color: #AB745A;
+        margin-bottom: 20px;
+        border-radius: 25px;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .ContactButtons {
+        font-weight: 600;
+        margin-top: 50px;
+        width: 80%;
+        display: flex;
+        flex-flow: column nowrap;
+        /* justify-content: space-evenly; */
+        align-items: flex-start;
+    }
+
+    .ContactInfo {
+        margin-bottom: 25px;
+    }
+
 }
