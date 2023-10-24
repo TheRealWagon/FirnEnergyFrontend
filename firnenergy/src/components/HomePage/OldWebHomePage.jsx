@@ -32,25 +32,25 @@ const OldWebHomePage = () => {
             <div className="Navbar">
                 <div><img className="NavbarLogo" src={WebLogo} alt="https://ibb.co/LdnxQng" /></div>
                 <div className="Navbar_Items">
-                    <div style={{color: "#AB745A", textDecoration: "underline"}}>Home</div>
+                    <div>Home</div>
                     <div>|</div>
                     <div><a className="NavbarLink" href="#AboutUsLink">Over Ons</a></div>
                     <div>|</div>
                     <div><a className="NavbarLink" href="#ContactLink">Contact</a></div>
-                    <div>|</div>
-                    <div>Industrieel</div>
-                    <div>|</div>
-                    <div>Residentieel</div>
+                    <div className="Phone-Remove">|</div>
+                    <div className="Phone-Remove">Industrieel</div>
+                    <div className="Phone-Remove">|</div>
+                    <div className="Phone-Remove">Residentieel</div>
                 </div>
                 <div className="Navbar_info">
-                    <div><button onClick={handleUserLogin} className="user_icon_button"><img className="user_icon" src={userIcon} alt="https://ibb.co/P5ZFx1K" /></button></div>
-                    <div><img className="info_icon" src={globeIcon} alt="https://ibb.co/wR9CG6h" /></div>
+                    <div className="Phone-Remove"><button onClick={handleUserLogin} className="user_icon_button"><img className="user_icon" src={userIcon} alt="https://ibb.co/P5ZFx1K" /></button></div>
+                    <div className="Phone-Remove"><img className="info_icon" src={globeIcon} alt="https://ibb.co/wR9CG6h" /></div>
                 </div>
             </div>
             <div className="cover"> 
                 <span className="Cover_Title">FirnEnergy</span>
                 <span className="Cover_Line"></span>
-                <span className="Cover_description">Innovatieve energie opslag & energie trading</span>
+                <span className="Cover_description">Innovatieve energie opslag & trading</span>
             </div>
             <div className="BatteryDisplay">
                 <div className="BatteryText">
