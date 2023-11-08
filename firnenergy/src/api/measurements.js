@@ -1,7 +1,12 @@
 import axios from 'axios';
 
-const baseURL = "https://firnenergybackend.onrender.com/api/measurements";
-// const baseURL = "http://localhost:9000/api/measurements";
+const inDevelopment = false;
+
+let baseURL = "https://firnenergybackend.onrender.com/api/measurements";
+
+if (inDevelopment) {
+    baseURL = "http://localhost:9000/api/measurements";
+}
 
 const Measurement = () => {
 

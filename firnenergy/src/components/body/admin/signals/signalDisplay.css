@@ -1,0 +1,70 @@
+
+.SignalInputFields {
+    padding: 8px;
+  /* margin-bottom: 10px; */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.Signalsbtn {
+    padding: 10px 15px;
+    /* margin-top: 10px; */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-color-red {
+    margin-top: 10px;
+    background-color: rgb(207, 41, 41);
+}
+
+.btn-color-green {
+    background-color: #4CAF50;
+}
+
+.btn-color-green:hover {
+  background-color: #45a049;
+}
+
+.btn-color-red:hover {
+    background-color: rgb(129, 23, 23);
+}
+
+.SignalInput {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.SignalInputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.SignalInputTextArea {
+  margin-top: 10px;
+  margin-right: 200px;
+  
+}
+.SignalInputTextAreaIn {
+    width: 500px;
+    height: 200px;
+}
+
+/* Additional styling for the signals list */
+.SignalDisplay {
+    margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.message-color-red {
+    color: red;
+}
+
+.message-color-green {
+    color: lightgreen;
+}
