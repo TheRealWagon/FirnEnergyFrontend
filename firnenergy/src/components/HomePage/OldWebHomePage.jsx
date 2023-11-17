@@ -15,6 +15,8 @@ import walletIcon from "../../Images/icons8-wallet-100.png"
 import phoneIcon from "../../Images/icons8-phone-100.png";
 import mailIcon from "../../Images/icons8-mail-100.png"
 import controllerImage from "../../Images/finis-removebg-preview.png"
+import Horecadisplay from "../../Images/Horeca.jpg"
+import Landbouwdisplay from "../../Images/Landbouw.jpg"
 import {useNavigate} from "react-router-dom";
 
 
@@ -38,9 +40,10 @@ const OldWebHomePage = () => {
                     <div>|</div>
                     <div><a className="NavbarLink" href="#ContactLink">Contact</a></div>
                     <div className="Phone-Remove">|</div>
-                    <div className="Phone-Remove">Industrieel</div>
+                    {/*<div className="Phone-Remove">Industrieel</div>
                     <div className="Phone-Remove">|</div>
-                    <div className="Phone-Remove">Residentieel</div>
+                    <div className="Phone-Remove">Residentieel</div>*/}
+                    <div className="NavbarLink"><a className="NavbarLink" href="#Profielen">Profielen</a></div>
                 </div>
                 <div className="Navbar_info">
                     <div className="Phone-Remove"><button onClick={handleUserLogin} className="user_icon_button"><img className="user_icon" src={userIcon} alt="https://ibb.co/P5ZFx1K" /></button></div>
@@ -105,22 +108,38 @@ const OldWebHomePage = () => {
                     <div className="ProfielTitel">Kies je profiel</div>
                     <div className="slider"></div>
                 </div>
-                <div className="profielBoxes">
-                    <div className="IndustrieelBox" style={{backgroundImage: Industrialdisplay}}>
+                <div className="profielBoxes" id="Profielen">
+                    <div className="IndustrieelBox boxAll" style={{backgroundImage: Industrialdisplay}}>
                         <div className="BoxText">
                             <span className="BoxTitle">Industrieel</span>
                             <span className="BoxSlider"></span>
                             <span className="BoxDesc">Laat jouw zonne-installatie slimmer werken</span>
                         </div>
-                        <span className="BoxFollow">Ontdek meer →</span>
+                        <span className="BoxFollow" onClick={() => navigate('/Industrie')}>Ontdek meer →</span>
                     </div>
-                    <div className="ResidentieelBox" style={{backgroundImage: Residentialdisplay}}>
+                    <div className="ResidentieelBox boxAll" style={{backgroundImage: Residentialdisplay}}>
                         <div className="BoxText">
                             <span className="BoxTitle">Residentieel</span>
                             <span className="BoxSlider"></span>
                             <span className="BoxDesc">Bespaar meer met slimme batterij integraties</span>
                         </div>
-                        <span className="BoxFollow">Ontdek meer →</span>
+                        <span className="BoxFollow" onClick={() => navigate('/Residentieel')}>Ontdek meer →</span>
+                    </div>
+                    <div className="HorecaBox boxAll" style={{backgroundImage: Horecadisplay}}>
+                        <div className="BoxText">
+                            <span className="BoxTitle">Horeca</span>
+                            <span className="BoxSlider"></span>
+                            <span className="BoxDesc">Bespaar meer met slimme batterij integraties</span>
+                        </div>
+                        <span className="BoxFollow" onClick={() => navigate('/Horeca')}>Ontdek meer →</span>
+                    </div>
+                    <div className="LandbouwBox boxAll" style={{backgroundImage: Landbouwdisplay}}>
+                        <div className="BoxText">
+                            <span className="BoxTitle">Landbouw</span>
+                            <span className="BoxSlider"></span>
+                            <span className="BoxDesc">Bespaar meer met slimme batterij integraties</span>
+                        </div>
+                        <span className="BoxFollow" onClick={() => navigate('/Landbouw')}>Ontdek meer →</span>
                     </div>
                 </div>
             </div>

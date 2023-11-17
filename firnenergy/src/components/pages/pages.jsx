@@ -5,6 +5,7 @@ import Body from '../body/bodyContainer';
 import Login from '../Authentication/login';
 import OldWebHomePage from '../HomePage/OldWebHomePage';
 import AdminPage from '../body/admin/adminPage';
+import Profiel from '../Profielen/Profiel';
 
 export const LoginPage = () => (
 
@@ -33,6 +34,12 @@ export const WebAdminPage = () => (
     <div>
         <Navbar></Navbar>
         <AdminPage></AdminPage>
+    </div>
+)
+
+export const ProfielPage = ( {profiel} ) => (
+    <div>
+       <Profiel profiel={profiel}></Profiel>
     </div>
 )
 

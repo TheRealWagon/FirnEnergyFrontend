@@ -59,6 +59,10 @@ body {
     cursor: pointer;
 }
 
+.navBarActive {
+    text-decoration: underline;
+}
+
 .Navbar_info {
     display: flex;
     justify-content: space-between;
@@ -213,7 +217,6 @@ content: "";
     flex: row nowrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
 }
 
 .ProfielTitel {
@@ -225,8 +228,13 @@ content: "";
 
 .profielBoxes {
     display: flex;
-    flex: row nowrap;
+    flex-wrap: wrap;
+    /*flex: row wrap;*/
     justify-content: space-evenly;
+}
+
+.boxAll {
+    margin : 3px;
 }
 
 .IndustrieelBox {
@@ -249,6 +257,37 @@ content: "";
     width: 30vw;
     height: 20vw;
     background-image: url("../../Images/aerial-view-new-houses-bridgwater-somerset-uk.jpg");
+    background-color: #000000;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.HorecaBox {
+    width: 30vw;
+    height: 20vw;
+    background-image: url("../../Images/Horeca.jpg");
+    background-color: #000000;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+.LandbouwBox {
+    width: 30vw;
+    height: 20vw;
+    background-image: url("../../Images/Landbouw.jpg");
     background-color: #000000;
     background-size: cover;
     background-position: center center;
@@ -349,6 +388,15 @@ content: "";
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 100px;
+}
+
+.ProfielBlock {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .ContactDesc {

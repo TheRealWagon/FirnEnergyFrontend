@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/navbar'
 import Body from './components/body/bodyContainer'
-import { LoginPage, HomePage, WebsiteHomePage, WebAdminPage } from './components/pages/pages'
+import { LoginPage, HomePage, WebsiteHomePage, WebAdminPage , ProfielPage} from './components/pages/pages'
 import { Routes, Route, Router} from "react-router-dom";
 
 function App() {
@@ -20,6 +20,10 @@ function App() {
         <Route path="LoginPage" element={<LoginPage></LoginPage>}></Route>
         <Route path='HomePage' element={<HomePage></HomePage>}></Route>
         <Route path='AdminPage' element={<WebAdminPage></WebAdminPage>}></Route>
+        <Route path='Industrie' element={<ProfielPage profiel='industrie'></ProfielPage>}></Route>
+        <Route path='Horeca' element={<ProfielPage profiel='horeca'></ProfielPage>}></Route>
+        <Route path='Residentieel' element={<ProfielPage profiel='residentieel'></ProfielPage>}></Route>
+        <Route path='Landbouw' element={<ProfielPage profiel='landbouw'></ProfielPage>}></Route>
       </Routes>
     </>
   );
