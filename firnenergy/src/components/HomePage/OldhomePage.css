@@ -460,6 +460,10 @@ content: "";
 
 @media screen and (max-width: 600px) {
  
+    .NavbarImage {
+        display: none;
+    }
+
     .HomePageBody {
         overflow-x: hidden;
     }
@@ -484,8 +488,8 @@ content: "";
     }
 
     .Navbar_Items {
-        width: 70%;
-        font-size: 1.2rem;
+        width: 100%;
+        font-size: 1.1rem;
         font-weight: 6000;
         display: flex;
         flex-flow: row nowrap;
@@ -646,6 +650,7 @@ content: "";
         color: white;
         width: 80%;
         height: 200px;
+        margin-top: 30px;
         background-image: url("../../Images/interior-large-logistics-warehouse-ai-generative.jpg");
         background-color: #000000;
         background-size: cover;
@@ -663,6 +668,49 @@ content: "";
         height: 200px;
         margin-top: 30px;
         background-image: url("../../Images/aerial-view-new-houses-bridgwater-somerset-uk.jpg");
+        background-color: #000000;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 25px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        color: white;
+    }
+
+    .HorecaBox {
+        width: 80%;
+        height: 200px;
+        margin-top: 30px;
+        background-image: url("../../Images/Horeca.jpg");
+        background-color: #000000;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 25px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        color: white;
+    }
+
+    .ProfielBlock {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .LandbouwBox {
+        width: 80%;
+        height: 200px;
+        margin-top: 30px;
+        background-image: url("../../Images/Landbouw.jpg");
         background-color: #000000;
         background-size: cover;
         background-position: center center;
@@ -699,7 +747,13 @@ content: "";
     }
 
     .ControllerImageResized {
-        width: 100%;
+        width: 70%;
+    }
+
+    .ProfielBlockImage {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
     }
 
     .AboutUs {

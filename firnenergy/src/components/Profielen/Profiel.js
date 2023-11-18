@@ -283,7 +283,7 @@ woning. De TellToCharge laadpalen integreren in het totaal systeem is een eviden
 
                         if(i % 2 === 0) {
                             return <div className="ProfielBlock">
-                                    <div><img className="ControllerImageResized" src={c.image} alt="" width={500}/></div>
+                                    <div className='ProfielBlockImage'><img className="ControllerImageResized" src={c.image} alt="" width={500}/></div>
                                     <div className="AboutUsText">
                                         <div className="AboutUsDesc">{parse(c.text)}</div>
                                     </div>
@@ -293,7 +293,7 @@ woning. De TellToCharge laadpalen integreren in het totaal systeem is een eviden
                                     <div className="AboutUsText">
                                         <div className="AboutUsDesc">{parse(c.text)}</div>
                                     </div>
-                                    <div><img className="ControllerImageResized" src={c.image} alt="" width={500}/></div>
+                                    <div className='ProfielBlockImage'><img className="ControllerImageResized" src={c.image} alt="" width={500}/></div>
                                 </div>
                         }
                         

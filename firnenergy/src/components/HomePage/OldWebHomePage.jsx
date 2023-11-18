@@ -32,14 +32,15 @@ const OldWebHomePage = () => {
     return (
         <div className="HomePageBody">
             <div className="Navbar">
-                <div><img className="NavbarLogo" src={WebLogo} alt="https://ibb.co/LdnxQng" /></div>
+                <div className="NavbarImage"><img className="NavbarLogo" src={WebLogo} alt="https://ibb.co/LdnxQng" /></div>
                 <div className="Navbar_Items">
                     <div>Home</div>
                     <div>|</div>
                     <div><a className="NavbarLink" href="#AboutUsLink">Over ons</a></div>
                     <div>|</div>
                     <div><a className="NavbarLink" href="#ContactLink">Contact</a></div>
-                    <div className="Phone-Remove">|</div>
+                    <div>|</div>
+                    {/* <div className="Phone-Remove">|</div> */}
                     {/*<div className="Phone-Remove">Industrieel</div>
                     <div className="Phone-Remove">|</div>
                     <div className="Phone-Remove">Residentieel</div>*/}
