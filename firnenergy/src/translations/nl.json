@@ -1,0 +1,100 @@
+{ "translation" : {
+    "title" : "FirnEnergy" ,
+    "subtitle" : "Innovatieve energie opslag & trading" ,
+    "menu" : {
+        "home" : "Home" ,
+        "aboutUs" : "Over ons" ,
+        "profiles" : "Profielen" ,
+        "contact" : "Contact"
+    } ,
+    "info" : {
+        "title" : "Optimaliseer uw batterij" ,
+        "subtext" : "Verslim de energie aankoop en verkoop, dankzij FIRN energy koopt u energie aan de laagste prijs en verkoopt u overshot aan de hoogste prijs" ,
+        "blocks" : [
+            {
+                "title" : "Duurzame batterijoplossingen" ,
+                "text" : "Dankzij de FIRN controller wordt uw batterij efficiënter gebruikt wat dan zorgt voor duurzame en betrouwbare batterij oplossingen."
+            } ,
+            {
+                "title" : "Geavanceerd energiemanagement" ,
+                "text" : "Met behulp van real time data wordt uw systeem aangestuurd om op ieder moment de meest gepaste beslissing te nemen."
+            } ,
+            {
+                "title" : "Geoptimaliseerde winter" ,
+                "text" : "Uw batterij wordt automatisch s ’nachts opgeladen om zo aan lage prijzen energie tijdens de dag te kunnen gebruiken."
+            } ,
+            {
+                "title" : "Real time monitoring" ,
+                "text" : "Bekijk uw statistieken waar en wanneer u wilt. Ook kunt u geavanceerde grafieken bekijken om een zo gedetailleerd mogelijk beeld van de geleverde prestaties te krijgen."
+            } ,
+            {
+                "title" : "Slimme teruglevering" ,
+                "text" : "Aan de hand van wisselende uurprijzen verkoopt de FIRN controller uw opgewekte energie aan de beste tarieven."
+            } 
+        ] 
+    } ,
+    "profiles" : {
+        "discoverMore" : "Ontdek meer" ,
+        "choose" : "Kies je profiel" ,
+        "blocks" : [
+            {
+                "title" : "Industrieel" ,
+                "subtitle" : "Laat jouw zonne-installatie slimmer werken"
+            } ,
+            {
+                "title" : "Residentieel" ,
+                "subtitle" : "Bespaar meer met slimme batterij integraties"
+            } ,
+            {
+                "title" : "Horeca" ,
+                "subtitle" : "Laat jouw zonne-installatie slimmer werken"
+            } ,
+            {
+                "title" : "Landbouw" ,
+                "subtitle" : "Bespaar meer met slimme batterij integraties"
+            }
+        ]
+    } ,
+    "help" : {
+        "title" : "Laat ons jou helpen" ,
+        "subtext" : "FIRN Energy is een toonaangevend bedrijf dat zich richt op het ontwikkelen van geavanceerde batterijoplossingen en energiemanagementsystemen. Wij geloven in de kracht van energieopslag en de impact die het kan hebben op de manier waarop we energie consumeren en beheren. Onze missie is om duurzame en betrouwbare energieopslagoplossingen te bieden die de overgang naar een groenere toekomst ondersteunen."
+    } ,
+    "contact" : {
+        "title" : "Contacteer ons" ,
+        "subtext" : "Wilt u meer informatie over onze innovatieve batterijoplossingen en energiemanagementsystemen? Neem vandaag nog contact met ons op en ontdek hoe FIRN Energy uw energiebeheer optimaliseert."
+    } ,
+    "profielData" :  {
+        "industrie" : {
+            "titel" : "KMO & Industrie" , 
+            "text" : [
+                "<h2>FIRN Energie Storage</h2><p>De industriële energie opslag is het buffervat om uw eigen verbruik te optimaliseren en optimaal van uw eigen energie gebruik te kunnen maken.</p><ul><li>MODULAIR SYTEEM van 40kWh tot 4000kWh</li><li>In technische ruimte of ENERGY CONTAINER</li></ul>" ,
+                "<h2>FIRN laadpalen</h2><p>De TellToCharge laadpalen integreren in het totaal systeem is een evidentie.</p><h2>FIRN energiemetingen</h2><p>Energie productie en verbruiken meten en visualiseren blijft altijd een basis van een energie management systeem.</p><h2>FIRN visualisatie</h2><p>Energie productie en verbruiken meten en visualiseren, besparingen in kaart brengen zijn mogelijk via een app en Website.</p>"
+            ]
+        } ,
+        "horeca" : {
+            "titel" : "Horeca" , 
+            "text" : [
+                    "<p>Iedereen heeft vorig jaar de enorme extra druk gevoeld door de ENERGIEPRIJZEN in deze reeds zware HORECA sector. Met de DAY AHEAD uurprijzen werkt U altijd aan de ALLERLAAGSTE ENERGIE UURPRIJZEN. Meestal is er in de HORECA sector veel meer verbruik dan met zonnepanelen kan gemaakt worden en verbruiksprofiel loopt meestal niet samen met wanneer er zon is => energiemanagement – aankoop op lage uren en energiestorage zorgen voor enorme besparingen! DE 30% ECOLOGIESTEUN voor KMO helpt zeker bij deze investeringen :</p><h2>FIRN energy aanbod</h2><ul><li>FIRN Energie Management Systeem</li></ul><p>Werkt op de DAY AHEAD energie prijs per uur met automatische aankoop in de winter op de lage uurprijzen als er niet voldoende productie is van de zonnepanelen. Bij overschot in de zomer energie verkoop je aan dure uurprijzen i.p.v. bijna gratis weg te geven.</p><p>Grotere verbruikers sturen in functie van energieprijzen en eigen productie of energieopslag.<br />Verbruik en opslag sturen via AI voorspelde eigen verbruik/productie/uurprijzen</p>",
+                    "<h2>FIRN Energie Storage</h2><p>De energie opslag is het buffervat om uw eigen verbruik te optimaliseren en optimaal van uw eigen energie gebruik te kunnen maken<br />De veel grotere opslagcapaciteit dan standaard thuisbatterijen zorgt dat u een modulair en uitbreidbaar opslag systeem hebt aangepast aan de typisch veel grotere verbruikers op een horeca-zaak.</p><h2>FIRN omvormers</h2><p>Retrofit of hybride omvormers. Indien u al zonnepanelen hebt kunnen we naadloos alles integreren in uw bestaande installatie via een retrofit omvormer. Met een hybride omvormer kan alles in 1 systeem.</p>" ,
+                    "<h2>FIRN laadpalen</h2><p>De elektrische wagens worden in sneltempo de grootste energieverbruikers in dewoning. De TellToCharge laadpalen integreren in het totaal systeem is een evidentie.</p><h2>FIRN energiemetingen</h2><p>Energie productie en verbruiken meten en visualiseren blijft altijd een basis van een energie management systeem.</p><h2>FIRN visualisatie </h2><p>Energie productie en verbruiken meten en visualiseren, besparingen in kaart brengen zijn mogelijk via een app en Website.</p>"
+            ]
+        } ,
+        "landbouw" : {
+            "titel" : "Landbouw" , 
+            "text" : [
+                "<p>De energiekost is ook een zware dobber voor de LANDBOUWSECTOR. Gelukkig is er wel de VLIF steun mogelijk voor de energie opslag : 40% (50% voor jonge landbouwers).</p><h2>FIRN energy aanbod</h2><ul><li>FIRN Energie Management Systeem</li></ul><p>Grotere verbruikers sturen in functie van energieprijzen en eigen productie of energieopslag.<br />Verbruik en opslag sturen via AI voorspelde eigen verbruik/productie/uurprijzen.<br />Energie Trading (goedkoop aankopen en duur verkopen met de energieopslag) wordt niet toegelaten voor de VLIF steun, maar met de FIRN controller kunnen we een SPECIFIEKE GEBRUIKSMODE voor de LANDBOUW invoeren.</p>" ,
+                "<h2>FIRN Energie Storage</h2><p>De energie opslag is het buffervat om uw eigen verbruik te optimaliseren en optimaal van uw eigen energie gebruik te kunnen maken<br />De veel grotere opslagcapaciteit dan standaard thuisbatterijen zorgt dat u een modulair en uitbreidbaar opslag systeem hebt aangepast aan de typisch veel grotere verbruikers op een landbouwbedrijf.</p><h2>FIRN omvormers</h2<p>Retrofit of hybride omvormers. Indien u al zonnepanelen hebt kunnen we naadloos alles integreren in uw bestaande installatie via een retrofit omvormer.Met een hybride omvormer kan alles in 1 systeem.</p>" ,
+                "<h2>FIRN laadpalen</h2><p>De elektrische wagens worden nemen ook zijn intrede in de landbouwsector. Misschien ook nog in de toekomst voor de zwaardere machines. Met de Teltocharge laadpalen kunnen we alles ook hiervoor in het totaalsysteem integreren.</p><h2>FIRN energiemetingen</h2><p>Energie productie en verbruiken meten en visualiseren blijft altijd een basis van een energie management systeem.</p><h2>FIRN visualisatie </h2><p>Energie productie en verbruiken meten en visualiseren, besparingen in kaart brengen zijn mogelijk via een app en Website.</p>"
+            ]
+        } ,
+        "residentieel" : {
+            "titel" : "Residentieel" , 
+            "text" : [
+                "<p>Hebt u verwarming via warmtepomp, een elektrische wagen, een hoger verbruik dan gemiddeld door zwembad of jacuzzi? Toch nog hoog verbruik in de winter indien zonnepanelen weinig produceren? Te kleine thuisbatterij van 10kWh voor uw wagen van 50kWh op te laden?</p><p>FIRN energy aanbod :<br />Systeem<br /><ul><li>FIRN Energie Management</li></ul></p><p>Werkt op de DAY AHEAD energie prijs per uur<br />Automatische aankoop in de winter op de lage uurprijzen als er niet voldoende productie is van de zonnepanelen. Bij overschot in de zomer energie verkopen aan dure uurprijzen i.p.v. bijna gratis weg te geven.</p><p>Grotere verbruikers sturen in functie van energieprijzen en eigen productie of energieopslag.</p><p>Verbruik en opslag sturen via AI voorspelde eigen verbruik/productie/uurprijzen</p>" ,
+                "<h2>FIRN Energie Storage</h2><p>De energie opslag is het buffervat om op de variabele energieprijzen te kunnen inwerken en het eigen verbruik te optimaliseren.</p><p>De grotere opslagcapaciteit dan standaard thuisbatterijen zorgt dat u altijd optimaal goedkoop kunt aankopen of duur verkopen. Voldoende capaciteit voor EV’s en andere grotere verbruikers, maar aan een veel lagere kost dan een standaard thuisbatterij.</p><h2>FIRN omvormers</h2><p>Retrofit of hybride omvormers. Indien u al zonnepanelen hebt kunnen we naadloos alles integreren in uw bestaande installatie via een retrofit omvormer.Met een hybride omvormer kan alles in 1 systeem.</p>" ,
+                "<h2>FIRN laadpalen</h2><p>De elektrische wagens worden in sneltempo de grootste energieverbruikers in de woning. De TellToCharge laadpalen integreren in het totaal systeem is een evidentie.</p><h2>FIRN energiemetingen</h2><p>Energie productie en verbruiken meten en visualiseren blijft altijd een basis van een energie management systeem.</p><h2>FIRN visualisatie</h2><p>Energie productie en verbruiken meten en visualiseren, besparingen in kaart brengen zijn mogelijk via een app en Website.</p>"
+
+            ]
+        }
+    }
+}}
