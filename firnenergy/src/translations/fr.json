@@ -6,7 +6,7 @@
         "home" : "Home" ,
         "aboutUs" : "Découvrez-nous " ,
         "profiles" : "Profils" ,
-        "contact" : "Contact"
+        "contact" : "Contactez nous"
     } ,
     "info" : {
         "title" : "Optimisez votre batterie" ,
@@ -18,7 +18,7 @@
             } ,
             {
                 "title" : "Gestion avancée de l'énergie" ,
-                "text" : "Grâce à des données en temps réel, votre système est contrôlé pour prendre la décision la plus appropriée à tout moment."
+                "text" : "Grâce à des données en temps réel, votre système est contrôlé pour prendre la décision la plus appropriée à tout moment. Réduire votre facture d’electriciter au maximum"
             } ,
             {
                 "title" : "Hiver optimisé" ,
@@ -68,8 +68,8 @@
         "industrie" : {
             "titel" : "PME & Industrie" , 
             "text" : [
-                "<h2>Stockage d'énergie FIRN</h2><p>Le stockage d'énergie industriel est le réservoir tampon pour optimiser votre propre consommation et utiliser de manière optimale votre propre énergie.</p><ul><li>SYSTÈME MODULAIRE à partir de 40kWh à 4000kWh</li><li>En local technique ou CONTENEUR D'ÉNERGIE</li></ul>" ,
-                "<h2>Bornes de recharge FIRN</h2><p>L'intégration des bornes de recharge TellToCharge dans le système global va de soi.</p><h2>Mesures d'énergie FIRN</h2><p>Mesurer et visualiser la production d'énergie et la consommation restera toujours la base d'un système de gestion de l'énergie.</p><h2>Visualisation FIRN</h2><p>Mesurer et visualiser la production et la consommation d'énergie, ainsi que cartographier les économies sont possibles via une application et un site Web.</ p>"
+                "<h2>Stockage d'énergie FIRN</h2><p>Le stockage d'énergie industriel est le réservoir tampon pour optimiser votre propre consommation et utiliser de manière optimale votre propre énergie.</p><ul><li>SYSTÈME MODULAIRE à partir de 40kWh</li><li>En local technique ou CONTENEUR D'ÉNERGIE</li></ul>" ,
+                "<h2>Bornes de recharge FIRN</h2><p>L'intégration des bornes de recharge TellToCharge dans le système global fonds de votre de gestion d’énergie un système intelligente.</p><h2>Mesures d'énergie FIRN</h2><p>Mesurer et visualiser la production d'énergie et la consommation restera toujours la base d'un système de gestion de l'énergie.</p><h2>Visualisation FIRN</h2><p>Mesurer et visualiser la production et la consommation d'énergie, ainsi que cartographier les économies sont possibles via une application et un site Web.</ p>"
             ]
         } ,
         "horeca" : {
@@ -77,7 +77,7 @@
             "text" : [
                 "<p>L'année dernière, tout le monde a ressenti une énorme pression supplémentaire en raison des PRIX DE L'ÉNERGIE dans ce secteur HORECA déjà difficile. Avec les prix horaires DAY AHEAD, vous travaillez toujours aux PRIX HORAIRES DE L'ÉNERGIE LES PLUS BAS. Il y a généralement beaucoup plus de consommation dans le secteur HORECA. qu'avec des panneaux solaires. peut être réalisé et le profil de consommation ne coïncide généralement pas avec le soleil => gestion de l'énergie - l'achat à des heures réduites et le stockage de l'énergie garantissent d'énormes économies ! LE SOUTIEN ÉCOLOGIQUE de 30 % pour les PME aide certainement à ces investissements :< /p><h2>Offre énergétique FIRN</h2><ul><li>Système de gestion de l'énergie FIRN</li></ul><p>Fonctionne au prix de l'énergie DAY AHEAD par heure avec achat automatique en hiver au des prix horaires bas s'il n'y a pas assez de production proviennent des panneaux solaires. S'il y a un surplus d'énergie en été, vous le vendez à des prix horaires élevés au lieu de le donner presque gratuitement.</p><p>Contrôle les plus gros consommateurs en fonction des prix de l'énergie et de leur propre production ou stockage d'énergie.<br />Contrôle de la consommation et du stockage prédit la propre consommation/production/prix horaires via l'IA</p>",
                 "<h2>Stockage d'énergie FIRN</h2><p>Le stockage d'énergie est le réservoir tampon pour optimiser votre propre consommation et utiliser de manière optimale votre propre énergie.<br />La capacité de stockage beaucoup plus grande que celle des batteries domestiques standard garantit que vous avez adapté un système de stockage modulaire et extensible aux consommateurs généralement beaucoup plus importants d'une entreprise de restauration.</p><h2>Onduleurs FIRN</h2><p>Onduleurs rétrofit ou hybrides. Si vous possédez déjà des panneaux solaires, nous pouvons faites tout intégrer de manière transparente dans votre installation existante via un onduleur de modernisation. Avec un onduleur hybride, tout est possible dans un seul système.</p>" ,
-                "<h2>Stations de recharge FIRN</h2><p>Les voitures électriques deviennent rapidement les plus gros consommateurs d'énergie dans la maison. L'intégration des bornes de recharge TellToCharge dans l'ensemble du système va de soi.</p><h2>Énergie FIRN mesures</h2> <p>Mesurer et visualiser la production et la consommation d'énergie reste toujours une base d'un système de gestion de l'énergie.</p><h2>Visualisation FIRN </h2><p>Mesurer et visualiser la production et la consommation d'énergie, cartographie des économies sont possibles via une application et un site Web.</p>"
+                "<h2>Stations de recharge FIRN</h2><p>Les voitures électriques deviennent rapidement les plus gros consommateurs d'énergie dans la maison. L'intégration des bornes de recharge TellToCharge dans le système global fonds de votre de gestion d’énergie un système intelligente.</p><h2>Énergie FIRN mesures</h2> <p>Mesurer et visualiser la production et la consommation d'énergie reste toujours une base d'un système de gestion de l'énergie.</p><h2>Visualisation FIRN </h2><p>Mesurer et visualiser la production et la consommation d'énergie, cartographie des économies sont possibles via une application et un site Web.</p>"
             ]
         } ,
         "landbouw" : {
@@ -93,7 +93,8 @@
             "text" : [
                 "<p>Vous avez un chauffage via une pompe à chaleur, une voiture électrique, une consommation supérieure à la moyenne due à une piscine ou un jacuzzi ? Une consommation encore élevée en hiver si les panneaux solaires produisent peu ? Batterie maison de 10kWh trop petite pour charger votre voiture de 50 kWh ? </p><p>Offre énergétique FIRN :<br />Système<br /><ul><li>Gestion de l'énergie FIRN</li></ul></p><p>Fonctionne sur le prix horaire de l'énergie DAY AHEAD<br />Achat automatique en hiver à des prix horaires bas si la production des panneaux solaires n'est pas suffisante. S'il y a un surplus d'énergie en été, vendez-la à des prix horaires élevés au lieu de distribuez-le presque gratuitement.</p><p> Contrôlez les plus gros consommateurs en fonction des prix de l'énergie et de votre propre production ou stockage d'énergie.</p><p>Envoyez la consommation et le stockage via l'IA prédit votre propre consommation/production/prix horaires< /p>" ,
                 "<h2>Stockage d'énergie FIRN</h2><p>Le stockage d'énergie est le réservoir tampon permettant de répondre aux prix variables de l'énergie et d'optimiser l'autoconsommation.</p><p>La capacité de stockage plus grande que celle des batteries domestiques standard garantit que vous pouvez toujours acheter à bas prix ou vendre cher. Capacité suffisante pour les véhicules électriques et autres gros consommateurs, mais à un coût bien inférieur à celui d'une batterie domestique standard.</p><h2>Onduleurs FIRN</h2><p>Onduleurs modernisés ou hybrides Si vous possédez déjà des panneaux solaires, nous pouvons tout intégrer de manière transparente dans votre installation existante via un onduleur de modernisation. Avec un onduleur hybride, tout est possible dans un seul système.</p>" ,
-                "<h2>Stations de recharge FIRN</h2><p>Les voitures électriques deviennent rapidement les plus gros consommateurs d'énergie dans la maison. L'intégration des bornes de recharge TellToCharge dans l'ensemble du système va de soi.</p><h2>Énergie FIRN mesures</h2 ><p>Mesurer et visualiser la production et la consommation d'énergie reste toujours une base d'un système de gestion de l'énergie.</p><h2>Visualisation FIRN</h2><p>Mesurer et visualiser la production et la consommation d'énergie, cartographie des économies sont possibles via une application et un site Web.</p>"
+                "<h2>Stations de recharge FIRN</h2><p>Les voitures électriques deviennent rapidement les plus gros consommateurs d'énergie dans la maison. L'intégration des bornes de recharge TellToCharge dans le système global fonds de votre de gestion d’énergie un système intelligente.</p><h2>Énergie FIRN mesures</h2 ><p>Mesurer et visualiser la production et la consommation d'énergie reste toujours une base d'un système de gestion de l'énergie.</p><h2>Visualisation FIRN</h2><p>Mesurer et visualiser la production et la consommation d'énergie, cartographie des économies sont possibles via une application et un site Web.</p>",
+                "<h2>Une solution complète pour auto-consomation</h2><p>Kit Plug-et-play:<ul><li>Controleur FIRN</li><li>Onduleur hybride</li><li>PS de 3KWh</li><li>Battery de 10KWh</li><li>Option: borne integrer</li><li>Option: contract Dynamics Électricité</li></ul>>Une solution parfaitement adaptée à vos besoins. Demandez une simulation.</p>"
 
             ]
         }

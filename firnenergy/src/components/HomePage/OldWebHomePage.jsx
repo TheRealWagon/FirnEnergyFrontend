@@ -17,6 +17,7 @@ import mailIcon from "../../Images/icons8-mail-100.png"
 import controllerImage from "../../Images/finis-removebg-preview.png"
 import Horecadisplay from "../../Images/Horeca.jpg"
 import Landbouwdisplay from "../../Images/Landbouw.jpg"
+import beurs from '../../Images/beurs.png'
 import {useNavigate} from "react-router-dom";
 import '../../translations/i18n';
 import { useTranslation  } from 'react-i18next';
@@ -116,6 +117,10 @@ const OldWebHomePage = () => {
                         </tr>
                     </tbody>
                 </table>
+                
+            </div>
+            <div className="profiel">
+                <img className='imgcenter' src={beurs} width='500' />
             </div>
             <div className="profiel">
                 <div className="ProfielHeader">

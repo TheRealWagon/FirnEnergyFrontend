@@ -4,6 +4,13 @@
     margin: 2px;
     cursor : pointer;
 }
+
+.imgcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 .Navbar {
     color: #231F20;
     font-family: 'Poppins', sans-serif;

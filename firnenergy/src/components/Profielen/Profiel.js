@@ -93,6 +93,8 @@ const Profiel = ( {profiel}) => {
                 } ,
                 {
                     image : screenDisplay , 
+                } , {
+                    image : WebLogo
                 }
             ]
         }
