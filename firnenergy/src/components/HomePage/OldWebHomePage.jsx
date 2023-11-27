@@ -17,11 +17,21 @@ import mailIcon from "../../Images/icons8-mail-100.png"
 import controllerImage from "../../Images/finis-removebg-preview.png"
 import Horecadisplay from "../../Images/Horeca.jpg"
 import Landbouwdisplay from "../../Images/Landbouw.jpg"
+import beurs from '../../Images/beurs.png'
 import {useNavigate} from "react-router-dom";
+import '../../translations/i18n';
+import { useTranslation  } from 'react-i18next';
+import "/node_modules/flag-icons/css/flag-icons.min.css";
+
+const languages = [
+    { lang : 'nl' , label : 'Nederlands' , flag : 'be' },
+    { lang : 'fr' , label : 'Français' , flag : 'fr'}]
 
 
 const OldWebHomePage = () => {
 
+    const { t , i18n } = useTranslation();
+    
     const navigate = useNavigate();
 
     const handleUserLogin = () => {
@@ -34,32 +44,37 @@ const OldWebHomePage = () => {
             <div className="Navbar">
                 <div className="NavbarImage"><img className="NavbarLogo" src={WebLogo} alt="https://ibb.co/LdnxQng" /></div>
                 <div className="Navbar_Items">
-                    <div>Home</div>
+                    <div>{t('menu.home')}</div>
                     <div>|</div>
-                    <div><a className="NavbarLink" href="#AboutUsLink">Over ons</a></div>
+                    <div><a className="NavbarLink" href="#AboutUsLink">{t('menu.aboutUs')}</a></div>
                     <div>|</div>
-                    <div><a className="NavbarLink" href="#ContactLink">Contact</a></div>
+                    <div><a className="NavbarLink" href="#ContactLink">{t('menu.contact')}</a></div>
                     <div>|</div>
                     {/* <div className="Phone-Remove">|</div> */}
                     {/*<div className="Phone-Remove">Industrieel</div>
                     <div className="Phone-Remove">|</div>
                     <div className="Phone-Remove">Residentieel</div>*/}
-                    <div className="NavbarLink"><a className="NavbarLink" href="#Profielen">Profielen</a></div>
+                    <div className="NavbarLink"><a className="NavbarLink" href="#Profielen">{t('menu.profiles')}</a></div>
                 </div>
                 <div className="Navbar_info">
                     <div className="Phone-Remove"><button onClick={handleUserLogin} className="user_icon_button"><img className="user_icon" src={userIcon} alt="https://ibb.co/P5ZFx1K" /></button></div>
-                    <div className="Phone-Remove"><img className="info_icon" src={globeIcon} alt="https://ibb.co/wR9CG6h" /></div>
+                    {
+                        //<div className="Phone-Remove"><img className="info_icon" src={globeIcon} alt="https://ibb.co/wR9CG6h" /></div>
+                    }
+                    {languages.map((l,c) => {
+                        return <span onClick={() => i18n.changeLanguage(l.lang)} title={`${l.label}`} className={`lang fi fi-${l.flag}`}></span>
+                    })}
                 </div>
             </div>
             <div className="cover"> 
-                <span className="Cover_Title">FirnEnergy</span>
+                <span className="Cover_Title">{t('title')}</span>
                 <span className="Cover_Line"></span>
-                <span className="Cover_description">Innovatieve energie opslag & trading</span>
+                <span className="Cover_description">{t('subtitle')}</span>
             </div>
             <div className="BatteryDisplay">
                 <div className="BatteryText">
-                    <div className="BatteryTitel">Optimaliseer uw batterij</div>
-                    <div className="BatteryDesc">Verslim de energie aankoop en verkoop, dankzij FIRN energy koopt u energie aan de laagste prijs en verkoopt u overshot aan de hoogste prijs</div>
+                    <div className="BatteryTitel">{t('info.title')}</div>
+                    <div className="BatteryDesc">{t('info.subtext')}</div>
                 </div>
                 <div><img className="BatteryImage" src={batterydisplay} alt="" /></div>
             </div>
@@ -69,30 +84,30 @@ const OldWebHomePage = () => {
                         <tr className="flex-row">
                             <td className="Property">
                                 <div className="PropImage"><div className="Circle"><img className="PropBat" src={batteryIcon} alt="" /></div></div>
-                                <div className="PropTitle">Duurzame batterijoplossingen</div>
-                                <div className="PropDesc">Dankzij de FIRN controller wordt uw batterij efficiënter gebruikt wat dan zorgt voor duurzame en betrouwbare batterij oplossingen.</div>
+                                <div className="PropTitle">{t('info.blocks.0.title')}</div>
+                                <div className="PropDesc">{t('info.blocks.0.text')}</div>
                             </td>
                             <td className="Property">
                                 <div className="PropImage"><div className="Circle"><img className="PropBat" src={flashIcon} alt="" /></div></div>
-                                <div className="PropTitle">Geavanceerd energiemanagement</div>
-                                <div className="PropDesc">Met behulp van real time data wordt uw systeem aangestuurd om op ieder moment de meest gepaste beslissing te nemen.</div>
+                                <div className="PropTitle">{t('info.blocks.1.title')}</div>
+                                <div className="PropDesc">{t('info.blocks.1.text')}</div>
                             </td>
                             <td className="Property">
                                 <div className="PropImage"><div className="Circle"><img className="PropBat" src={snowIcon} alt="" /></div></div>
-                                <div className="PropTitle">Geoptimaliseerde winter</div>
-                                <div className="PropDesc">Uw batterij wordt automatisch s ’nachts opgeladen om zo aan lage prijzen energie tijdens de dag te kunnen gebruiken.</div>
+                                <div className="PropTitle">{t('info.blocks.2.title')}</div>
+                                <div className="PropDesc">{t('info.blocks.2.text')}</div>
                             </td>
                         </tr>
                         <tr className="flex-row2">
                             <td className="Property">
                                 <div className="PropImage"><div className="Circle"><img className="PropBat" src={monitorIcon} alt="" /></div></div>
-                                <div className="PropTitle">Real time monitoring</div>
-                                <div className="PropDesc">Bekijk uw statistieken waar en wanneer u wilt. Ook kunt u geavanceerde grafieken bekijken om een zo gedetailleerd mogelijk beeld van de geleverde prestaties te krijgen.</div>
+                                <div className="PropTitle">{t('info.blocks.3.title')}</div>
+                                <div className="PropDesc">{t('info.blocks.3.text')}</div>
                             </td>
                             <td className="Property">
                                 <div className="PropImage"><div className="Circle"><img className="PropBat" src={walletIcon} alt="" /></div></div>
-                                <div className="PropTitle">Slimme teruglevering</div>
-                                <div className="PropDesc">Aan de hand van wisselende uurprijzen verkoopt de FIRN controller uw opgewekte energie aan de beste tarieven.</div>
+                                <div className="PropTitle">{t('info.blocks.4.title')}</div>
+                                <div className="PropDesc">{t('info.blocks.4.text')}</div>
                             </td>
                             <td className="notVisible">
                                 <div className="PropImage"><div className="Circle"><img className="PropBat" src="" alt="" /></div></div>
@@ -102,64 +117,67 @@ const OldWebHomePage = () => {
                         </tr>
                     </tbody>
                 </table>
+                
+            </div>
+            <div className="profiel">
+                <img className='imgcenter' src={beurs} width='500' />
             </div>
             <div className="profiel">
                 <div className="ProfielHeader">
                     <div className="slider"></div>
-                    <div className="ProfielTitel">Kies je profiel</div>
+                    <div className="ProfielTitel">{t('profiles.choose')}</div>
                     <div className="slider"></div>
                 </div>
                 <div className="profielBoxes" id="Profielen">
                     <div className="IndustrieelBox boxAll" style={{backgroundImage: Industrialdisplay}}>
                         <div className="BoxText">
-                            <span className="BoxTitle">Industrieel</span>
+                            <span className="BoxTitle">{t('profiles.blocks.0.title')}</span>
                             <span className="BoxSlider"></span>
-                            <span className="BoxDesc">Laat jouw zonne-installatie slimmer werken</span>
+                            <span className="BoxDesc">{t('profiles.blocks.0.subtitle')}</span>
                         </div>
-                        <span className="BoxFollow" onClick={() => navigate('/Industrie')}>Ontdek meer →</span>
+                        <span className="BoxFollow" onClick={() => navigate('/Industrie')}>{t('profiles.discoverMore')} →</span>
                     </div>
                     <div className="ResidentieelBox boxAll" style={{backgroundImage: Residentialdisplay}}>
                         <div className="BoxText">
-                            <span className="BoxTitle">Residentieel</span>
+                            <span className="BoxTitle">{t('profiles.blocks.1.title')}</span>
                             <span className="BoxSlider"></span>
-                            <span className="BoxDesc">Bespaar meer met slimme batterij integraties</span>
+                            <span className="BoxDesc">{t('profiles.blocks.1.subtitle')}</span>
                         </div>
-                        <span className="BoxFollow" onClick={() => navigate('/Residentieel')}>Ontdek meer →</span>
+                        <span className="BoxFollow" onClick={() => navigate('/Residentieel')}>{t('profiles.discoverMore')} →</span>
                     </div>
                     <div className="HorecaBox boxAll" style={{backgroundImage: Horecadisplay}}>
                         <div className="BoxText">
-                            <span className="BoxTitle">Horeca</span>
+                            <span className="BoxTitle">{t('profiles.blocks.2.title')}</span>
                             <span className="BoxSlider"></span>
-                            <span className="BoxDesc">Bespaar meer met slimme batterij integraties</span>
+                            <span className="BoxDesc">{t('profiles.blocks.2.subtitle')}</span>
                         </div>
-                        <span className="BoxFollow" onClick={() => navigate('/Horeca')}>Ontdek meer →</span>
+                        <span className="BoxFollow" onClick={() => navigate('/Horeca')}>{t('profiles.discoverMore')} →</span>
                     </div>
                     <div className="LandbouwBox boxAll" style={{backgroundImage: Landbouwdisplay}}>
                         <div className="BoxText">
-                            <span className="BoxTitle">Landbouw</span>
+                            <span className="BoxTitle">{t('profiles.blocks.3.title')}</span>
                             <span className="BoxSlider"></span>
-                            <span className="BoxDesc">Bespaar meer met slimme batterij integraties</span>
+                            <span className="BoxDesc">{t('profiles.blocks.3.subtitle')}</span>
                         </div>
-                        <span className="BoxFollow" onClick={() => navigate('/Landbouw')}>Ontdek meer →</span>
+                        <span className="BoxFollow" onClick={() => navigate('/Landbouw')}>{t('profiles.discoverMore')} →</span>
                     </div>
                 </div>
             </div>
             <div className="AboutUs" id="AboutUsLink">
                 <div><img className="ControllerImageResized" src={controllerImage} alt="" /></div>
                 <div className="AboutUsText">
-                    <div className="AboutUsTitel">Laat ons jou helpen</div>
-                    <div className="AboutUsDesc">FIRN Energy is een toonaangevend bedrijf dat zich richt op het ontwikkelen van geavanceerde batterijoplossingen en energiemanagementsystemen. Wij geloven in de kracht van energieopslag en de impact die het kan hebben op de manier waarop we energie consumeren en beheren. Onze missie is om duurzame en betrouwbare energieopslagoplossingen te bieden die de overgang naar een groenere toekomst ondersteunen.</div>
+                    <div className="AboutUsTitel">{t('help.title')}</div>
+                    <div className="AboutUsDesc">{t('help.subtext')}</div>
                 </div>
             </div>
             <div className="Contact" id="ContactLink">
                 <div className="ProfielHeader">
                     <div className="slider"></div>
-                    <div className="ProfielTitel">Contacteer ons</div>
+                    <div className="ProfielTitel">{t('contact.title')}</div>
                     <div className="slider"></div>
                 </div>
                 <div className="ContactInfo">
-                    <div className="ContactDesc">Wilt u meer informatie over onze innovatieve batterijoplossingen en energiemanagementsystemen? Neem vandaag nog  
-                        contact met ons op en ontdek hoe FIRN Energy uw energiebeheer optimaliseert</div>
+                    <div className="ContactDesc">{t('contact.subtext')}</div>
                     <div className="ContactButtons">
                         <div className="PhoneButton"><img className="ContactImage" src={phoneIcon} alt="" /><div>+32 56 19 88 77</div></div>
                         <div className="EmailButton"><img className="ContactImage" src={mailIcon} alt="" /><div>Sales@firnenergy.com</div></div>
