@@ -149,7 +149,7 @@ const SignalDisplay = () => {
                         <div className="SignalInput">
                             <div style={{marginRight: "100px"}}>
                                 <form className="SignalInputForm" onSubmit={handleSetExtraData}>
-                                    <div >
+                                    <div>
                                         {/* <label >Jaar: </label>
                                         <input type="text" name="year" required />
                                         <label >Maand: </label>
@@ -209,7 +209,7 @@ const SignalDisplay = () => {
                         </div>
                         
                         <div className="SignalDisplay" style={{paddingLeft: 15}}>{`Signals: [`}{Signals.map((signal, index) => 
-                            <div className="SignalDisplay" style={{paddingLeft: 15}}>{`{ date: ${signal.Day}/${signal.Month}/${signal.Year} tijd: ${signal.Hour}:${signal.Minutes}:${signal.Seconds}, powerSetPoint_W: ${signal.Power}, policy: ${signal.Policy} }`}</div>
+                            <div key={index} className="SignalDisplay" style={{paddingLeft: 15}}>{`{ date: ${signal.Day}/${signal.Month}/${signal.Year} tijd: ${signal.Hour}:${signal.Minutes}:${signal.Seconds}, powerSetPoint_W: ${signal.Power}, policy: ${signal.Policy} }`}</div>
                         )}
                         {`]`}</div>
                         <button onClick={handleSendSignals}>Send Signals to Battery</button>
@@ -218,11 +218,11 @@ const SignalDisplay = () => {
                 : 
                     <form onSubmit={handleSetSignal}>
                         <div >
-                            <label >serialNr</label>
+                            <label style={{marginRight: 15}}>serialNr:</label>
                             <input type="text" name="serialNr" required />
                         </div>
                         <div >
-                            <label >nodeId</label>
+                            <label style={{marginRight: 22}}>nodeId:</label>
                             <input type="text" name="nodeId" required />
                         </div>
                         <button type="submit">Set Signal</button>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const inDevelopment = true;
+const inDevelopment = false;
 
 let baseURL = "https://firnenergybackend.onrender.com/api/measurements";
 
