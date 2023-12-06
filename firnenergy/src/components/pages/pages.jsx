@@ -32,7 +32,7 @@ export const WebsiteHomePage = () => (
 
 export const WebAdminPage = () => (
     <div>
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar> */}
         <AdminPage></AdminPage>
     </div>
 )
