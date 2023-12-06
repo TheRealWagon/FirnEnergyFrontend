@@ -22,7 +22,7 @@ const Login = () => {
         const token = localStorage.getItem('jwtToken');
 
         if (token) {
-
+            console.log("this runs")
             const user = await userApi.GetUsername(token);
 
             if (user.data.user.role == "USER") {

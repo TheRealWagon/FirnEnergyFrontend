@@ -1,6 +1,12 @@
 import axios from "axios";
 
-const baseURL = "https://firnenergybackend.onrender.com/api/users/";
+const inDevelopment = true;
+
+let baseURL = "https://firnenergybackend.onrender.com/api/users";
+
+if (inDevelopment) {
+    baseURL = "http://localhost:9000/api/users";
+}
 
 const User = () => {
 
@@ -15,7 +21,7 @@ const User = () => {
         let config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: `https://firnenergybackend.onrender.com/api/users/login`,
+        url: baseURL + "/login",
         headers: {
             'Content-Type': 'application/json'
         },
@@ -41,7 +47,7 @@ const User = () => {
         let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: `https://firnenergybackend.onrender.com/api/users/info`,
+        url: baseURL + "/info",
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`
@@ -68,7 +74,7 @@ const User = () => {
         let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: `https://firnenergybackend.onrender.com/api/users/AccessToken`,
+        url: baseURL + "/AccessToken",
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`
@@ -103,7 +109,7 @@ const User = () => {
         let config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: `https://firnenergybackend.onrender.com/api/users/add`,
+        url: baseURL + "/add",
         headers: {
             'Content-Type': 'application/json'
         },
@@ -128,7 +134,7 @@ const User = () => {
         let config = {
         method: 'get',
         maxBodyLength: Infinity,
-        url: `https://firnenergybackend.onrender.com/api/users/users`,
+        url: baseURL + "/users",
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`
@@ -156,7 +162,7 @@ const User = () => {
         let config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: `https://firnenergybackend.onrender.com/api/users/change/enirisEmail`,
+        url: baseURL + "/change/enirisEmail",
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`
@@ -183,7 +189,7 @@ const User = () => {
         let config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: `https://firnenergybackend.onrender.com/api/users/change/deviceid`,
+        url: baseURL + "/change/deviceid",
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`
@@ -212,7 +218,7 @@ const User = () => {
         let config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: `https://firnenergybackend.onrender.com/api/users/change/enirispassword`,
+        url: baseURL + "/change/enirispassword",
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`
@@ -239,7 +245,7 @@ const User = () => {
         let config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: `https://firnenergybackend.onrender.com/api/users/ResetPassword`,
+        url: baseURL + "/ResetPassword",
         headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`
