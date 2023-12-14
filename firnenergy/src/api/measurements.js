@@ -232,6 +232,29 @@ const Measurement = () => {
         }
     }
 
+    const testPython = async () => {
+        console.log("this runs")
+        let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: `/testPython`,
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        data: JSON.stringify({
+            
+        }),
+        };
+
+        try {
+            const response = await axios.post(baseURL + config.url, config.data, config);
+            return response.data; // Return the data after successful response
+        } catch (error) {
+            console.log(error);
+            throw error; // Rethrow the error to handle it in HandleLoginEvent if needed
+        }
+    }
+
     //////////////////////////////////////////////
     //////////////////////////////////////////////
     //////////////////////////////////////////////
@@ -1024,6 +1047,7 @@ const Measurement = () => {
         getBatteryPercentageRange,
         getBarChartRevenueData,
         setSignal,
+        testPython,
     }
 
 
