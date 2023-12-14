@@ -59,7 +59,7 @@ const SignalDisplay = () => {
         const policy = formData.get("policy");
 
         const dateObject = new Date(datum);
-        dateObject.setHours(dateObject.getHours() - 1);
+        dateObject.setHours(dateObject.getHours());
         const year = dateObject.getFullYear();
         const month = dateObject.getMonth() + 1; // Adding 1 to adjust for 0-based months
         const day = dateObject.getDate();
@@ -95,7 +95,7 @@ const SignalDisplay = () => {
     
                 const dateObject = new Date(year, month - 1, day, hours, minutes, seconds);
                 //herrekening
-                dateObject.setHours(dateObject.getHours() - 1);
+                dateObject.setHours(dateObject.getHours());
     
                 const arr = {'Year': dateObject.getFullYear(), 'Month': dateObject.getMonth() + 1, 'Day': dateObject.getDate(), 'Hour': dateObject.getHours(), 'Minutes': dateObject.getMinutes(), 'Seconds': dateObject.getSeconds(), 'Power': element[2], 'Policy': element[3]}
                 setSignals((Signals) => [...Signals, arr]);

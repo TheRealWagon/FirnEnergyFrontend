@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const inDevelopment = false;
+const inDevelopment = true;
 
 let baseURL = "https://firnenergybackend.onrender.com/api/users";
 
